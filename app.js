@@ -74,6 +74,175 @@ const BASE_RATE_5       = 0.01;      // 1% base 5★ rate
 const BASE_RATE_4       = 0.07;      // 7% base 4★ rate
 const MAX_DAILY_PULLS   = 250;       // per banner per day
 
+function applyCursorClass(cursorName) {
+  document.body.className = document.body.className.split(' ').filter(c => !c.startsWith('cursor-')).join(' ');
+  document.body.classList.add(`cursor-${cursorName}`);
+}
+
+function initSettings() {
+  const settingsBtn = document.getElementById('settings-btn');
+  const settingsModal = document.getElementById('settings-modal');
+  const settingsClose = document.getElementById('settings-close-btn');
+
+  // Toggle modal
+  settingsBtn.addEventListener('click', () => {
+    settingsModal.style.display = ''; // Remove display:none if set
+    requestAnimationFrame(() => requestAnimationFrame(() => settingsModal.classList.add('active')));
+  });
+  
+  const closeModal = () => {
+    settingsModal.classList.remove('active');
+    setTimeout(() => { settingsModal.style.display = 'none'; }, 300);
+  };
+  
+  settingsClose.addEventListener('click', closeModal);
+  settingsModal.addEventListener('click', (e) => {
+    if (e.target === settingsModal) closeModal();
+  });
+
+  // Accordion Logic
+  const accordions = document.querySelectorAll('.settings-accordion');
+  accordions.forEach(acc => {
+    const summary = acc.querySelector('summary');
+    const content = acc.querySelector('.accordion-content');
+    
+    summary.addEventListener('click', (e) => {
+      e.preventDefault(); // Take over the toggle
+      
+      if (acc.hasAttribute('open')) {
+        // Close this one with animation
+        content.style.animation = 'slideUp 0.2s ease-in forwards';
+        content.addEventListener('animationend', function handler() {
+          acc.removeAttribute('open');
+          content.style.animation = ''; // reset
+          content.removeEventListener('animationend', handler);
+        });
+      } else {
+        // Close others
+        accordions.forEach(other => {
+          if (other !== acc && other.hasAttribute('open')) {
+            const otherContent = other.querySelector('.accordion-content');
+            otherContent.style.animation = 'slideUp 0.2s ease-in forwards';
+            otherContent.addEventListener('animationend', function handler() {
+              other.removeAttribute('open');
+              otherContent.style.animation = '';
+              otherContent.removeEventListener('animationend', handler);
+            });
+          }
+        });
+        
+        // Open this one
+        acc.setAttribute('open', '');
+        content.style.animation = 'slideDown 0.3s ease-out forwards';
+      }
+    });
+  });
+
+  // Audio Slider
+  const volumeSlider = document.getElementById('volume-slider');
+  volumeSlider.value = gs.volume ?? 0.4;
+  volumeSlider.addEventListener('input', (e) => {
+    const vol = parseFloat(e.target.value);
+    document.getElementById('bg-music').volume = vol;
+    gs.volume = vol;
+    saveState();
+  });
+
+  // Cursor Buttons
+  const cursorBtns = document.querySelectorAll('.cursor-btn');
+  cursorBtns.forEach(btn => {
+    if (btn.dataset.cursor === (gs.cursor || 'default')) {
+      cursorBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    btn.addEventListener('click', () => {
+      cursorBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cursorName = btn.dataset.cursor;
+      gs.cursor = cursorName;
+      saveState();
+      applyCursorClass(cursorName);
+    });
+  });
+
+  // Reset Button Inside Settings
+  const resetConfirmModalHtml = `
+      <style>
+        .alert-overlay {
+          position: fixed; inset: 0; z-index: 3000;
+          background: rgba(5, 5, 15, 0.85); backdrop-filter: blur(10px);
+          display: flex; align-items: center; justify-content: center;
+          opacity: 0; pointer-events: none; transition: opacity 0.25s ease;
+        }
+        .alert-overlay.active { opacity: 1; pointer-events: all; }
+        .alert-modal {
+          width: 90%; max-width: 400px;
+          background: rgba(20, 10, 10, 0.95);
+          border: 1px solid rgba(255, 60, 60, 0.3); border-radius: 12px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(255, 60, 60, 0.15);
+          padding: 30px; text-align: center;
+          transform: scale(0.95); transition: transform 0.25s ease;
+        }
+        .alert-overlay.active .alert-modal { transform: scale(1); }
+        .alert-header { font-family: 'Cinzel', serif; font-size: 22px; color: #ff6b6b; letter-spacing: 0.1em; margin-bottom: 24px; }
+        .alert-body { display: flex; flex-direction: column; gap: 24px; }
+        .alert-danger-box { background: rgba(255, 60, 60, 0.08); border: 1px dashed rgba(255, 60, 60, 0.3); padding: 16px; border-radius: 8px; }
+        .alert-danger-title { color: #ff6b6b; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 8px; }
+        .alert-danger-text { color: var(--txt-2); font-size: 15px; font-weight: 500; letter-spacing: 0.03em; }
+        .alert-btn {
+          flex: 1; height: 44px; border-radius: 22px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+          text-transform: uppercase; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;
+        }
+        .alert-btn-cancel { background: transparent; color: var(--txt-2); border: 1px solid rgba(255,255,255,0.2); }
+        .alert-btn-cancel:hover { background: rgba(255,255,255,0.05); color: var(--txt); }
+        .alert-btn-confirm { background: rgba(255, 60, 60, 0.1); color: #ff6b6b; border: 1px solid rgba(255, 60, 60, 0.4); }
+        .alert-btn-confirm:hover { background: rgba(255, 60, 60, 0.2); border-color: rgba(255, 60, 60, 0.6); box-shadow: 0 0 12px rgba(255, 60, 60, 0.2); }
+      </style>
+      <div id="reset-confirm-modal" class="alert-overlay" aria-modal="true" role="dialog" style="display:none;">
+        <div class="alert-modal">
+          <div class="alert-header">RESET DATA</div>
+          <div class="alert-body">
+            <p style="color: var(--txt); font-size: 15px; line-height: 1.6; margin: 0;">
+              Are you sure you want to completely reset all gacha data?
+            </p>
+            <div class="alert-danger-box">
+              <span class="alert-danger-title">This will permanently delete:</span>
+              <span class="alert-danger-text">Pulls, Pity, Wishes, and Collection</span>
+            </div>
+            <div style="display: flex; gap: 16px; justify-content: center;">
+              <button id="reset-cancel-btn" class="alert-btn alert-btn-cancel">CANCEL</button>
+              <button id="reset-confirm-action-btn" class="alert-btn alert-btn-confirm">CONFIRM</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', resetConfirmModalHtml);
+  
+  const resetBtn = document.getElementById('settings-reset-btn');
+  const resetModal = document.getElementById('reset-confirm-modal');
+  
+  resetBtn.addEventListener('click', () => {
+    resetModal.style.display = '';
+    requestAnimationFrame(() => requestAnimationFrame(() => resetModal.classList.add('active')));
+  });
+
+  const closeResetModal = () => {
+    resetModal.classList.remove('active');
+    setTimeout(() => { resetModal.style.display = 'none'; }, 250);
+  };
+
+  document.getElementById('reset-cancel-btn').addEventListener('click', closeResetModal);
+  resetModal.addEventListener('click', (e) => {
+    if (e.target === resetModal) closeResetModal();
+  });
+
+  document.getElementById('reset-confirm-action-btn').addEventListener('click', () => {
+    localStorage.removeItem(STATE_KEY);
+    location.reload();
+  });
+}
+
 // ── STATE ──────────────────────────────────────────────────
 const STATE_KEY = 'lds_gacha_v1';
 
@@ -96,7 +265,8 @@ function defaultState() {
     // Collection Tracking: { "Card Name": count }
     collection: {},
     // Manual Rank Tracking: { "Card Name": rank }
-    ranks: {}
+    ranks: {},
+    volume: 0.4,
   };
 }
 
@@ -1027,79 +1197,8 @@ function initEvents() {
     showScreen('select');
   });
 
-  // Reset Data
-  const resetBtn = document.getElementById('reset-btn');
-  if (resetBtn) {
-    const modalHtml = `
-      <style>
-        .alert-overlay {
-          position: fixed; inset: 0; z-index: 3000;
-          background: rgba(5, 5, 15, 0.85); backdrop-filter: blur(10px);
-          display: flex; align-items: center; justify-content: center;
-          opacity: 0; pointer-events: none; transition: opacity 0.25s ease;
-        }
-        .alert-overlay.active { opacity: 1; pointer-events: all; }
-        .alert-modal {
-          width: 90%; max-width: 400px;
-          background: rgba(20, 10, 10, 0.95);
-          border: 1px solid rgba(255, 60, 60, 0.3); border-radius: 12px;
-          box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(255, 60, 60, 0.15);
-          padding: 30px; text-align: center;
-          transform: scale(0.95); transition: transform 0.25s ease;
-        }
-        .alert-overlay.active .alert-modal { transform: scale(1); }
-        .alert-header { font-family: 'Cinzel', serif; font-size: 22px; color: #ff6b6b; letter-spacing: 0.1em; margin-bottom: 24px; }
-        .alert-body { display: flex; flex-direction: column; gap: 24px; }
-        .alert-danger-box { background: rgba(255, 60, 60, 0.08); border: 1px dashed rgba(255, 60, 60, 0.3); padding: 16px; border-radius: 8px; }
-        .alert-danger-title { color: #ff6b6b; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 8px; }
-        .alert-danger-text { color: var(--txt-2); font-size: 15px; font-weight: 500; letter-spacing: 0.03em; }
-        .alert-btn {
-          flex: 1; height: 44px; border-radius: 22px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
-          text-transform: uppercase; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;
-        }
-        .alert-btn-cancel { background: transparent; color: var(--txt-2); border: 1px solid rgba(255,255,255,0.2); }
-        .alert-btn-cancel:hover { background: rgba(255,255,255,0.05); color: var(--txt); }
-        .alert-btn-confirm { background: rgba(255, 60, 60, 0.1); color: #ff6b6b; border: 1px solid rgba(255, 60, 60, 0.4); }
-        .alert-btn-confirm:hover { background: rgba(255, 60, 60, 0.2); border-color: rgba(255, 60, 60, 0.6); box-shadow: 0 0 12px rgba(255, 60, 60, 0.2); }
-      </style>
-      <div id="reset-confirm-modal" class="alert-overlay" aria-modal="true" role="dialog">
-        <div class="alert-modal">
-          <div class="alert-header">RESET DATA</div>
-          <div class="alert-body">
-            <p style="color: var(--txt); font-size: 15px; line-height: 1.6; margin: 0;">
-              Are you sure you want to completely reset all gacha data?
-            </p>
-            <div class="alert-danger-box">
-              <span class="alert-danger-title">This will permanently delete:</span>
-              <span class="alert-danger-text">Pulls, Pity, Wishes, and Collection</span>
-            </div>
-            <div style="display: flex; gap: 16px; justify-content: center;">
-              <button id="reset-cancel-btn" class="alert-btn alert-btn-cancel">CANCEL</button>
-              <button id="reset-confirm-action-btn" class="alert-btn alert-btn-confirm">CONFIRM</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-    document.body.insertAdjacentHTML('beforeend', modalHtml);
-    const resetModal = document.getElementById('reset-confirm-modal');
-    
-    resetBtn.addEventListener('click', () => {
-      resetModal.classList.add('active');
-    });
-
-    document.getElementById('reset-cancel-btn').addEventListener('click', () => {
-      resetModal.classList.remove('active');
-    });
-    resetModal.addEventListener('click', (e) => {
-      if (e.target === resetModal) resetModal.classList.remove('active');
-    });
-
-    document.getElementById('reset-confirm-action-btn').addEventListener('click', () => {
-      localStorage.removeItem(STATE_KEY);
-      location.reload();
-    });
-  }
+  // Settings Modal & Reset
+  initSettings();
 
   // Pull ×1
   document.getElementById('pull-1-btn').addEventListener('click', () => {
@@ -1223,7 +1322,7 @@ function initAudio() {
   const musicIconPlay = document.getElementById('music-icon-play');
   const musicIconPause = document.getElementById('music-icon-pause');
 
-  bgMusic.volume = 0.4;
+  bgMusic.volume = gs.volume ?? 0.4;
 
   // Attempt autoplay on load
   bgMusic.play().then(() => {
@@ -1255,6 +1354,10 @@ function init() {
 
   initStarfield();
   initParticleCanvas();
+  
+  // Apply initial global cursor
+  applyCursorClass(gs.cursor || 'default');
+
   initEvents();
   initAudio();
   initCollection();
