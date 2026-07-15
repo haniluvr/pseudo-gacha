@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love and Deepspace — Gacha Simulator</title>
+  <meta name="description" content="A Love and Deepspace gacha simulator. Pull for Xavier, Zayne, Rafayel, Sylus, Caleb, and Valko on Limited and Standard banners with full pity systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Infant:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Persistent starfield background -->
+    <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+
+    <!-- ═══════════════════════════════════
+         SCREEN 1 — BANNER SELECT
+    ════════════════════════════════════ -->
+    <div id="screen-select" class="screen active" role="main" aria-label="Banner Selection">
+
+      <!-- ── Outer frame: broken border + arc corners ── -->
+      <div class="sf-frame" aria-hidden="true">
+        <div class="sf-seg sf-seg-top"></div>
+        <div class="sf-seg sf-seg-right"></div>
+        <div class="sf-seg sf-seg-bottom"></div>
+        <div class="sf-seg sf-seg-left"></div>
+
+        <!-- Top-left corner (Image 2 style) -->
+        <div class="sf-corner-tl">
+          <div class="sf-l-bracket"></div>
+          <div class="sf-c-dot"></div>
+          <div class="sf-c-arc"></div>
+        </div>
+
+        <!-- Bottom-right corner (Image 2 style) -->
+        <div class="sf-corner-br">
+          <div class="sf-l-bracket"></div>
+          <div class="sf-c-dot"></div>
+          <div class="sf-c-arc"></div>
+        </div>
+
+        <!-- Top-right corner: solid outer arc + dotted inner arc -->
+        <div class="sf-arc-tr-s"></div>
+        <div class="sf-arc-tr-d"></div>
+
+        <!-- Bottom-left corner: solid outer arc + dotted inner arc -->
+        <div class="sf-arc-bl-s"></div>
+        <div class="sf-arc-bl-d"></div>
+
+        <!-- Constellation — left side -->
+        <svg class="sf-constellation sf-const-left" viewBox="0 0 120 200" aria-hidden="true">
+          <g stroke="#c9a96e" stroke-width="0.8" fill="none" opacity="0.5">
+            <line x1="30" y1="30"  x2="55" y2="70"/>
+            <line x1="55" y1="70"  x2="45" y2="110"/>
+            <line x1="55" y1="70"  x2="80" y2="85"/>
+            <line x1="45" y1="110" x2="60" y2="148"/>
+          </g>
+          <g fill="#c9a96e">
+            <circle cx="30"  cy="30"  r="2.5" opacity="0.8"/>
+            <circle cx="55"  cy="70"  r="2"   opacity="0.7"/>
+            <circle cx="45"  cy="110" r="1.8" opacity="0.6"/>
+            <circle cx="80"  cy="85"  r="1.5" opacity="0.6"/>
+            <circle cx="60"  cy="148" r="2"   opacity="0.7"/>
+          </g>
+          <g fill="#c9a96e" opacity="0.4">
+            <circle cx="10" cy="60"  r="1"/>
+            <circle cx="95" cy="40"  r="1.2"/>
+            <circle cx="100" cy="160" r="0.8"/>
+          </g>
+        </svg>
+
+        <!-- Constellation — right-bottom -->
+        <svg class="sf-constellation sf-const-right" viewBox="0 0 150 180" aria-hidden="true">
+          <g stroke="#c9a96e" stroke-width="0.8" fill="none" opacity="0.5">
+            <line x1="80"  y1="40"  x2="55"  y2="80"/>
+            <line x1="55"  y1="80"  x2="75"  y2="120"/>
+            <line x1="75"  y1="120" x2="50"  y2="155"/>
+            <line x1="75"  y1="120" x2="100" y2="140"/>
+          </g>
+          <g fill="#c9a96e">
+            <circle cx="80"  cy="40"  r="2.2" opacity="0.8"/>
+            <circle cx="55"  cy="80"  r="1.8" opacity="0.7"/>
+            <circle cx="75"  cy="120" r="2"   opacity="0.7"/>
+            <circle cx="50"  cy="155" r="1.5" opacity="0.6"/>
+            <circle cx="100" cy="140" r="1.8" opacity="0.6"/>
+          </g>
+          <g fill="#c9a96e" opacity="0.4">
+            <circle cx="20"  cy="30"  r="1"/>
+            <circle cx="130" cy="60"  r="1.2"/>
+            <circle cx="15"  cy="140" r="0.8"/>
+          </g>
+        </svg>
+
+        <!-- Scattered stars in frame -->
+        <svg class="sf-stars" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="white">
+            <circle cx="20" cy="15" r="0.6" opacity="0.6"/>
+            <circle cx="70" cy="8"  r="0.8" opacity="0.7"/>
+            <circle cx="85" cy="30" r="0.5" opacity="0.5"/>
+            <circle cx="12" cy="75" r="0.7" opacity="0.6"/>
+            <circle cx="90" cy="80" r="0.6" opacity="0.5"/>
+            <circle cx="55" cy="92" r="0.8" opacity="0.7"/>
+            <circle cx="35" cy="50" r="0.5" opacity="0.4"/>
+            <circle cx="78" cy="55" r="0.7" opacity="0.5"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Reset button -->
+      <button id="reset-btn" class="sf-reset-btn" aria-label="Reset Data" title="Reset all gacha data">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+
+      <!-- ── Center content ── -->
+      <div class="select-center">
+
+        <!-- Arch panel — dotted outer arch + solid inner arch, no bottom -->
+        <div class="arch-panel">
+          <!-- Outer dotted arch with planet icon at center-top -->
+          <div class="arch-outer">
+
+            <!-- Planet/Saturn icon absolutely at the arch top center -->
+            <div class="arch-planet-wrap" aria-hidden="true">
+              <svg class="arch-planet-svg" viewBox="0 0 70 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 6 24 A 29 9 0 0 1 64 24" stroke="#c9a96e" stroke-width="1" opacity="0.4" fill="none"/>
+                <circle cx="35" cy="24" r="13" fill="#0e0e30" stroke="#c9a96e" stroke-width="1.2"/>
+                <circle cx="35" cy="24" r="8"  fill="none" stroke="rgba(201,169,110,0.22)" stroke-width="0.8"/>
+                <path d="M 6 24 A 29 9 0 0 0 64 24" stroke="#c9a96e" stroke-width="1" opacity="0.88" fill="none"/>
+                <circle cx="6"  cy="24" r="1.5" fill="#c9a96e" opacity="0.6"/>
+                <circle cx="64" cy="24" r="1.5" fill="#c9a96e" opacity="0.6"/>
+              </svg>
+            </div>
+
+            <!-- Inner solid arch with all content -->
+            <div class="arch-inner">
+              <img src="assets/ui/love and deepspace.png" alt="Love and Deepspace" class="arch-logo">
+              <div class="arch-divider" aria-hidden="true">
+                <span class="arch-div-line"></span>
+                <span class="arch-div-gem">✦</span>
+                <span class="arch-div-line"></span>
+              </div>
+              <p class="arch-sub">Gacha Simulator</p>
+            </div>
+
+          </div><!-- /.arch-outer -->
+        </div><!-- /.arch-panel -->
+
+        <!-- Banner cards — Image 2 style -->
+        <div class="banner-row">
+
+          <!-- Limited Banner -->
+          <article class="banner-card limited-card" id="banner-card-limited"
+                   role="button" tabindex="0" aria-label="Enter Limited Banner">
+            <!-- Corner dots -->
+            <div class="bc-corner bc-tl" aria-hidden="true"></div>
+            <div class="bc-corner bc-tr" aria-hidden="true"></div>
+            <div class="bc-corner bc-bl" aria-hidden="true"></div>
+            <div class="bc-corner bc-br" aria-hidden="true"></div>
+
+            <!-- Planet icon -->
+            <div class="bc-planet-area">
+              <svg class="bc-planet-svg" viewBox="0 0 60 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 5 21 A 25 8 0 0 1 55 21" stroke="#c9a96e" stroke-width="0.9" opacity="0.4" fill="none"/>
+                <circle cx="30" cy="21" r="11" fill="#0b0b28" stroke="#c9a96e" stroke-width="1"/>
+                <circle cx="30" cy="21" r="7"  fill="none" stroke="rgba(201,169,110,0.25)" stroke-width="0.7"/>
+                <path d="M 5 21 A 25 8 0 0 0 55 21" stroke="#c9a96e" stroke-width="0.9" opacity="0.85" fill="none"/>
+                <circle cx="5"  cy="21" r="1.2" fill="#c9a96e" opacity="0.6"/>
+                <circle cx="55" cy="21" r="1.2" fill="#c9a96e" opacity="0.6"/>
+              </svg>
+            </div>
+
+            <!-- Vertical divider -->
+            <div class="bc-vdivider" aria-hidden="true"></div>
+
+            <!-- Card content -->
+            <div class="bc-content">
+              <div class="bc-header-row">
+                <span class="bc-badge bc-badge-gold">✦ LIMITED EVENT</span>
+                <span class="bc-pulls" id="limited-pulls-display">250 / 250</span>
+              </div>
+              <p class="bc-title">Limited Wish Event</p>
+              <div class="bc-dotrow" aria-hidden="true">· · · · · · · · · · · · · · · · · · · ·</div>
+              <div class="bc-footer-row">
+                <span class="bc-featured">Featured: <strong>Valko</strong></span>
+                <span class="bc-pity gold-val" id="limited-pity-display">0 / 70 pity</span>
+              </div>
+            </div>
+
+            <!-- Scattered stars in card -->
+            <svg class="bc-stars" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <g fill="white">
+                <circle cx="80" cy="20" r="1" opacity="0.5"/>
+                <circle cx="90" cy="70" r="0.8" opacity="0.4"/>
+                <circle cx="75" cy="85" r="1.2" opacity="0.5"/>
+              </g>
+            </svg>
+
+            <button class="bc-enter-btn" id="enter-limited-btn" aria-label="Enter Limited Banner">
+              Pull Now →
+            </button>
+          </article>
+
+          <!-- Standard Banner -->
+          <article class="banner-card standard-card" id="banner-card-standard"
+                   role="button" tabindex="0" aria-label="Enter Standard Banner">
+            <!-- Corner dots -->
+            <div class="bc-corner bc-tl" aria-hidden="true"></div>
+            <div class="bc-corner bc-tr" aria-hidden="true"></div>
+            <div class="bc-corner bc-bl" aria-hidden="true"></div>
+            <div class="bc-corner bc-br" aria-hidden="true"></div>
+
+            <!-- Planet icon -->
+            <div class="bc-planet-area">
+              <svg class="bc-planet-svg" viewBox="0 0 60 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 5 21 A 25 8 0 0 1 55 21" stroke="#7b8ef7" stroke-width="0.9" opacity="0.4" fill="none"/>
+                <circle cx="30" cy="21" r="11" fill="#0b0b28" stroke="#7b8ef7" stroke-width="1"/>
+                <circle cx="30" cy="21" r="7"  fill="none" stroke="rgba(123,142,247,0.25)" stroke-width="0.7"/>
+                <path d="M 5 21 A 25 8 0 0 0 55 21" stroke="#7b8ef7" stroke-width="0.9" opacity="0.85" fill="none"/>
+                <circle cx="5"  cy="21" r="1.2" fill="#7b8ef7" opacity="0.6"/>
+                <circle cx="55" cy="21" r="1.2" fill="#7b8ef7" opacity="0.6"/>
+              </svg>
+            </div>
+
+            <!-- Vertical divider -->
+            <div class="bc-vdivider bc-vdivider-blue" aria-hidden="true"></div>
+
+            <!-- Card content -->
+            <div class="bc-content">
+              <div class="bc-header-row">
+                <span class="bc-badge bc-badge-blue">★ STANDARD</span>
+                <span class="bc-pulls blue-val" id="standard-pulls-display">250 / 250</span>
+              </div>
+              <p class="bc-title">Xspace Echo</p>
+              <div class="bc-dotrow" aria-hidden="true">· · · · · · · · · · · · · · · · · · · ·</div>
+              <div class="bc-footer-row">
+                <span class="bc-featured">All love interests</span>
+                <span class="bc-pity blue-val" id="standard-pity-display">0 / 70 pity</span>
+              </div>
+            </div>
+
+            <!-- Scattered stars -->
+            <svg class="bc-stars" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <g fill="white">
+                <circle cx="80" cy="20" r="1" opacity="0.5"/>
+                <circle cx="90" cy="70" r="0.8" opacity="0.4"/>
+                <circle cx="75" cy="85" r="1.2" opacity="0.5"/>
+              </g>
+            </svg>
+
+            <button class="bc-enter-btn bc-enter-btn-blue" id="enter-standard-btn" aria-label="Enter Standard Banner">
+              Pull Now →
+            </button>
+          </article>
+
+        </div><!-- /.banner-row -->
+
+      </div><!-- /.select-center -->
+
+      <!-- Footer -->
+      <footer class="select-footer">
+        <div class="daily-reset-row">
+          <svg class="reset-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Daily pulls reset in</span>
+          <span class="countdown-timer" id="reset-countdown" aria-live="polite">--:--:--</span>
+        </div>
+        <p class="footer-hint">5★ at 70 pity &nbsp;·&nbsp; 4★ every 10 pulls &nbsp;·&nbsp; 50/50 on limited</p>
+        <p class="footer-disclaimer">Disclaimer: This is an unofficial, fan-made web application and is not affiliated with, endorsed, sponsored, or approved by Papergames or Infold Games. Love and Deepspace, its characters, artwork, audio, and all associated intellectual property are the exclusive property of their respective copyright holders. This project is created strictly for entertainment and fan purposes, with no commercial intent. No copyright infringement is intended.</p>
+      </footer>
+
+    </div><!-- /screen-select -->
+
+
+    <!-- ═══════════════════════════════════
+         SCREEN 2 — PULL
+    ════════════════════════════════════ -->
+    <div id="screen-pull" class="screen" role="main" aria-label="Pull Screen">
+
+      <div class="pull-bg" id="pull-bg" aria-hidden="true"></div>
+      <div class="pull-vignette" aria-hidden="true"></div>
+
+      <!-- Pull screen frame -->
+      <div class="sf-frame" aria-hidden="true">
+        <div class="sf-seg sf-seg-top"></div>
+        <div class="sf-seg sf-seg-right"></div>
+        <div class="sf-seg sf-seg-bottom"></div>
+        <div class="sf-seg sf-seg-left"></div>
+
+        <!-- Top-left corner (Image 2 style) -->
+        <div class="sf-corner-tl">
+          <div class="sf-l-bracket"></div>
+          <div class="sf-c-dot"></div>
+          <div class="sf-c-arc"></div>
+        </div>
+
+        <!-- Bottom-right corner (Image 2 style) -->
+        <div class="sf-corner-br">
+          <div class="sf-l-bracket"></div>
+          <div class="sf-c-dot"></div>
+          <div class="sf-c-arc"></div>
+        </div>
+
+        <!-- Top-right corner: solid outer arc + dotted inner arc -->
+        <div class="sf-arc-tr-s"></div>
+        <div class="sf-arc-tr-d"></div>
+
+        <!-- Bottom-left corner: solid outer arc + dotted inner arc -->
+        <div class="sf-arc-bl-s"></div>
+        <div class="sf-arc-bl-d"></div>
+      </div>
+
+      <button class="back-btn" id="back-btn" aria-label="Back to banner selection">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+
+      <!-- Pull Modal Wrapper -->
+      <div class="pull-modal-outer arch-outer">
+        <!-- Planet/Saturn icon absolutely at the arch top center -->
+        <div class="arch-planet-wrap" aria-hidden="true">
+          <svg class="arch-planet-svg" viewBox="0 0 70 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 6 24 A 29 9 0 0 1 64 24" stroke="#c9a96e" stroke-width="1" opacity="0.4" fill="none"/>
+            <circle cx="35" cy="24" r="13" fill="#0e0e30" stroke="#c9a96e" stroke-width="1.2"/>
+            <circle cx="35" cy="24" r="8"  fill="none" stroke="rgba(201,169,110,0.22)" stroke-width="0.8"/>
+            <path d="M 6 24 A 29 9 0 0 0 64 24" stroke="#c9a96e" stroke-width="1" opacity="0.88" fill="none"/>
+            <circle cx="6"  cy="24" r="1.5" fill="#c9a96e" opacity="0.6"/>
+            <circle cx="64" cy="24" r="1.5" fill="#c9a96e" opacity="0.6"/>
+          </svg>
+        </div>
+
+        <div class="pull-modal-inner arch-inner">
+          <!-- Character showcase -->
+          <section class="pull-showcase" aria-hidden="true">
+            <div class="showcase-ring showcase-ring-outer"></div>
+            <div class="showcase-ring showcase-ring-inner"></div>
+            <div class="showcase-content" id="showcase-content"></div>
+          </section>
+
+          <!-- Bottom panel -->
+          <section class="pull-panel" aria-label="Pull controls">
+            <div class="panel-top-row">
+              <div>
+                <h2 class="panel-banner-title" id="panel-banner-title">—</h2>
+                <span class="panel-event-tag" id="panel-event-tag">—</span>
+              </div>
+            </div>
+
+            <div class="wish-row">
+              <div class="wish-icon-circle" id="wish-icon-circle" aria-hidden="true">✦</div>
+              <div class="wish-text-group">
+                <span class="wish-type-label" id="wish-type-label">Deepspace Wishes</span>
+                <span class="wish-remaining-count" id="wish-remaining-count">250 remaining</span>
+              </div>
+            </div>
+
+            <div class="pity-section">
+              <div class="pity-header-row">
+                <span class="pity-heading">5★ Pity</span>
+                <span class="pity-counter" id="pity-counter">0 / 70</span>
+              </div>
+              <div class="pity-track" role="progressbar" aria-label="5 star pity progress" aria-valuemin="0" aria-valuemax="70" id="pity-track-el">
+                <div class="pity-fill" id="pity-fill"></div>
+                <div class="pity-soft-marker" title="Soft pity starts at pull 60"></div>
+              </div>
+              <span class="pity-soft-hint">↑ Soft pity at 60</span>
+            </div>
+
+            <div class="guarantee-zone" id="guarantee-zone" aria-live="polite"></div>
+
+            <div class="pull-btns-row">
+              <button class="pull-action-btn" id="pull-1-btn" aria-label="Pull once">
+                <div class="btn-shine" aria-hidden="true"></div>
+                <span class="pull-btn-gem" aria-hidden="true">✦</span>
+                <span class="pull-btn-text">Pull ×1</span>
+              </button>
+              <button class="pull-action-btn pull-ten-btn" id="pull-10-btn" aria-label="Pull ten times">
+                <div class="btn-shine" aria-hidden="true"></div>
+                <span class="pull-btn-gem" aria-hidden="true">✦✦</span>
+                <span class="pull-btn-text">Pull ×10</span>
+              </button>
+            </div>
+
+            <p class="rules-hint">
+              <svg class="star-tiny" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9 1-5 4.9 1.2 6.9-6.1-3.2-6.1 3.2 1.2-6.9-5-4.9 6.9-1z"/></svg>
+              4★ guaranteed every 10 pulls · 5★ guaranteed at 70 pity
+            </p>
+          </section>
+        </div>
+      </div>
+
+    </div><!-- /screen-pull -->
+
+
+    <!-- ═══════════════════════════════════
+         SCREEN 3 — REVEAL
+    ════════════════════════════════════ -->
+    <div id="screen-reveal" class="screen" role="main" aria-label="Card Reveal">
+
+      <!-- Corner circles -->
+      <div class="rv-corner rv-tl" aria-hidden="true"></div>
+      <div class="rv-corner rv-tr" aria-hidden="true"></div>
+      <div class="rv-corner rv-bl" aria-hidden="true"></div>
+      <div class="rv-corner rv-br" aria-hidden="true"></div>
+
+      <div class="reveal-bg" aria-hidden="true"></div>
+      <canvas id="particles-canvas" aria-hidden="true"></canvas>
+      <div class="reveal-flash" id="reveal-flash" aria-hidden="true"></div>
+
+      <header class="reveal-header">
+        <p class="reveal-title" id="reveal-title">Memory Obtained</p>
+      </header>
+      <button id="skip-reveal-btn" class="skip-btn" aria-label="Skip Animation" style="display:none;">Skip</button>
+
+      <div class="cards-stage layout-1" id="single-card-stage" aria-live="polite"></div>
+      <div class="cards-stage layout-10" id="summary-card-stage" aria-live="polite" style="display:none;"></div>
+
+      <footer class="reveal-footer">
+        <p class="result-summary" id="result-summary" aria-live="polite"></p>
+        <button class="collect-btn" id="collect-btn" aria-label="Collect all memories">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9 1-5 4.9 1.2 6.9-6.1-3.2-6.1 3.2 1.2-6.9-5-4.9 6.9-1z"/></svg>
+          Collect All
+        </button>
+      </footer>
+
+      <div id="reveal-click-overlay" class="reveal-click-overlay" aria-hidden="true" style="display:none;"></div>
+
+    </div><!-- /screen-reveal -->
+
+  </div><!-- /app -->
+
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="cards.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
