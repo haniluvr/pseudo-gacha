@@ -1343,7 +1343,8 @@ function initEvents() {
   initSettings();
 
   // Pull x1
-  document.getElementById('pull-1-btn').addEventListener('click', () => {
+  document.getElementById('pull-1-btn').addEventListener('click', (e) => {
+    e.currentTarget.blur();
     const rem = getRemainingPulls();
     if (rem < 1) { showToast('No pulls remaining today! Reset in ' + getCountdownStr()); return; }
     const results = performPulls(1, currentBanner);
@@ -1353,7 +1354,8 @@ function initEvents() {
   });
 
   // Pull ×10
-  document.getElementById('pull-10-btn').addEventListener('click', () => {
+  document.getElementById('pull-10-btn').addEventListener('click', (e) => {
+    e.currentTarget.blur();
     const rem = getRemainingPulls();
     if (rem < 10) {
       showToast(`Need 10 pulls — only ${rem} remaining today.`);
