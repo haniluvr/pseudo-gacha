@@ -3215,10 +3215,16 @@ body.cursor-zayne * {
     max-width: 100%;
   }
 
-  /* Reduce star icon size to fit smaller cards */
+  /* Reduce star icon size to fit smaller cards and apply negative spacing */
+  .col-card-stars {
+    gap: 0;
+  }
   .col-star-icon {
     width: 13px;
     height: 13px;
+  }
+  .col-star-icon + .col-star-icon {
+    margin-left: -2px;
   }
 
   .col-type-icon {
