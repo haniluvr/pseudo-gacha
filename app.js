@@ -281,6 +281,9 @@ function loadState() {
 function saveState() {
   try {
     localStorage.setItem(STATE_KEY, JSON.stringify(gs));
+    if (typeof updateCollectionNotification === 'function') {
+      updateCollectionNotification();
+    }
   } catch (_) { /* ignore */ }
 }
 
@@ -1035,9 +1038,16 @@ function playPreRevealVideo(result, onComplete) {
     return onComplete();
   }
 
+  const isMobile = window.innerWidth <= 600;
+  const suffix = isMobile ? '_mobile.mp4' : '.mp4';
+
   const videoPaths = {
-    'xavier': 'assets/ui/animations/xavier_animation.mp4',
-    'zayne': 'assets/ui/animations/zayne_animation.mp4'
+    'xavier': `assets/ui/animations/xavier_animation${suffix}`,
+    'zayne': `assets/ui/animations/zayne_animation${suffix}`,
+    'sylus': `assets/ui/animations/sylus_animation${suffix}`,
+    'rafayel': `assets/ui/animations/rafayel_animation${suffix}`,
+    'caleb': `assets/ui/animations/caleb_animation${suffix}`,
+    'valko': `assets/ui/animations/valko_animation${suffix}`
   };
 
   const path = videoPaths[result.character.toLowerCase()];
@@ -1363,6 +1373,9 @@ function init() {
   initCollection();
   refreshBannerSelect();
   startCountdown();
+  if (typeof updateCollectionNotification === 'function') {
+    updateCollectionNotification();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);

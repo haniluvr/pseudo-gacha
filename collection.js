@@ -149,7 +149,11 @@ function initCollection() {
     modal.classList.add('active');
     renderCollection();
   });
-  modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+  modal.addEventListener('click', (e) => { 
+    if (!e.target.closest('.col-arch-outer') && !e.target.closest('.col-body')) {
+      modal.classList.remove('active'); 
+    }
+  });
 
   charTabs.forEach(tab => {
     tab.addEventListener('click', () => setCharFilter(tab.dataset.char));
@@ -304,5 +308,34 @@ function initCollection() {
     rankUpBtn.disabled = !canRankUp;
 
     detailsModal.style.display = 'flex';
+  }
+}
+
+function updateCollectionNotification() {
+  if (typeof CARD_CATALOG === 'undefined' || !gs || !gs.collection) return;
+  let hasNotif = false;
+  for (const card of CARD_CATALOG) {
+    const count = gs.collection[card.cardName] || 0;
+    if (count > 0) {
+      const rank = gs.ranks[card.cardName] || 0;
+      if (count > rank + 1 && rank < 3) {
+        hasNotif = true;
+        break;
+      }
+    }
+  }
+  
+  const btn = document.getElementById('collection-open-btn');
+  if (btn) {
+    let dot = btn.querySelector('.col-notif-dot');
+    if (hasNotif) {
+      if (!dot) {
+        dot = document.createElement('div');
+        dot.className = 'col-notif-dot';
+        btn.appendChild(dot);
+      }
+    } else {
+      if (dot) dot.remove();
+    }
   }
 }

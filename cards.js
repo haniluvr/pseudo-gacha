@@ -296,16 +296,6 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/lotus bond.png",
-    "cardName": "Lotus Bond",
-    "isVideo": false
-  },
-  {
-    "character": "caleb",
-    "rarity": 4,
-    "rarityStr": "4star",
-    "type": "lunar",
-    "bannerType": "both",
     "assetPath": "assets/caleb/four-star/lunar/skyline.png",
     "cardName": "Skyline",
     "isVideo": false
@@ -448,6 +438,16 @@ const CARD_CATALOG = [
     "bannerType": "both",
     "assetPath": "assets/caleb/three-star/lunar/literary immersion.png",
     "cardName": "Literary Immersion",
+    "isVideo": false
+  },
+  {
+    "character": "caleb",
+    "rarity": 3,
+    "rarityStr": "3star",
+    "type": "lunar",
+    "bannerType": "both",
+    "assetPath": "assets/caleb/three-star/lunar/lotus bond.png",
+    "cardName": "Lotus Bond",
     "isVideo": false
   },
   {
@@ -2056,8 +2056,8 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/valko/four-star/lunar/the tameless game.png",
-    "cardName": "The Tameless Game",
+    "assetPath": "assets/valko/four-star/lunar/tameless game.png",
+    "cardName": "Tameless Game",
     "isVideo": false
   },
   {
@@ -2076,8 +2076,8 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/valko/four-star/solar/IMG_6837.PNG",
-    "cardName": "IMG_6837",
+    "assetPath": "assets/valko/four-star/solar/by your side.png",
+    "cardName": "By Your Side",
     "isVideo": false
   },
   {
@@ -2086,8 +2086,8 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/valko/four-star/solar/IMG_6838.PNG",
-    "cardName": "IMG_6838",
+    "assetPath": "assets/valko/four-star/solar/in your arms.png",
+    "cardName": "In Your Arms",
     "isVideo": false
   },
   {
