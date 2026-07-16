@@ -3205,7 +3205,7 @@ body.cursor-zayne * {
   /* Grid: 3 columns for mobile cards */
   .col-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
     padding: 14px 12px 60px;
   }
