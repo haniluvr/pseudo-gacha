@@ -490,6 +490,11 @@
 
     </div><!-- /screen-reveal -->
 
+    <!-- Pull Start Universal Video -->
+    <div id="pull-start-video-container" class="pull-start-video-container" aria-hidden="true" style="display:none;">
+      <video id="pull-start-video" playsinline></video>
+    </div>
+
     <!-- Global Audio Player -->
     <audio id="bg-music" src="assets/ui/love-and-lightyear.mp3" loop autoplay></audio>
     <button id="music-toggle" class="music-toggle-btn" aria-label="Toggle background music">
@@ -513,10 +518,14 @@
         <details class="settings-accordion" open>
           <summary>Audio</summary>
           <div class="accordion-content">
-            <p class="settings-desc">Adjust the background music volume.</p>
+            <p class="settings-desc">Adjust the volume for background music and sound effects.</p>
             <div class="slider-row">
               <span>Music</span>
               <input type="range" id="volume-slider" class="settings-slider" min="0" max="1" step="0.01" value="1">
+            </div>
+            <div class="slider-row">
+              <span>SFX</span>
+              <input type="range" id="sfx-slider" class="settings-slider" min="0" max="1" step="0.01" value="0.5">
             </div>
           </div>
         </details>

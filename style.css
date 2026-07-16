@@ -1279,6 +1279,34 @@ svg {
   object-fit: cover;
 }
 
+/* ── PULL START UNIVERSAL VIDEO ──────────────────────────── */
+.pull-start-video-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1000; /* Above all screens */
+  background: #000;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.pull-start-video-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#pull-start-video {
+  /* Desktop defaults: rotate 90 deg */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vh;
+  height: 100vw;
+  transform: translate(-50%, -50%) rotate(90deg);
+  object-fit: cover;
+}
+
 .reveal-bg {
   position: absolute;
   inset: 0;
@@ -2159,7 +2187,7 @@ svg {
 .settings-desc {
   font-size: 13px;
   color: var(--txt-2);
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   line-height: 1.5;
   text-align: left;
 }
@@ -2170,6 +2198,16 @@ svg {
   gap: 16px;
   font-size: 14px;
   color: var(--txt);
+  margin-bottom: 24px;
+}
+.slider-row:last-child {
+  margin-bottom: 0;
+}
+
+.slider-row span {
+  width: 50px;
+  display: inline-block;
+  font-weight: 500;
 }
 
 .settings-slider {
@@ -3242,6 +3280,15 @@ body.cursor-zayne * {
     left: var(--sp3);
     font-size: 11px;
     padding: var(--sp2) var(--sp3);
+  }
+
+  /* Pull Start Video Mobile Reset */
+  #pull-start-video {
+    width: 100%;
+    height: 100%;
+    transform: none;
+    top: 0;
+    left: 0;
   }
 
   /* Controls row tighter */

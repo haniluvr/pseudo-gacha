@@ -73,6 +73,47 @@ const SOFT_PITY_RATE    = 0.085;     // extra rate added per pull in soft pity z
 const BASE_RATE_5       = 0.01;      // 1% base 5★ rate
 const BASE_RATE_4       = 0.07;      // 7% base 4★ rate
 const MAX_DAILY_PULLS   = 250;       // per banner per day
+// --- AUDIO SFX ---
+const sfx = {
+  back: new Audio('assets/audio-cue/back_cue.mp3'),
+  collectionModal: new Audio('assets/audio-cue/collection_modal_cue.mp3'),
+  openWish: new Audio('assets/audio-cue/open_wish_cue.mp3'),
+  pullReveal: new Audio('assets/audio-cue/pull_reveal_cue.mp3'),
+  pullRevealAll: new Audio('assets/audio-cue/pull_reveal_all_cue.mp3'),
+  select: new Audio('assets/audio-cue/select_cue.mp3')
+};
+Object.values(sfx).forEach(a => {
+  a.volume = 0.5; // Will be overridden in initSettings once gs is loaded
+  a.preload = 'auto';
+});
+
+function playSFX(name) {
+  if (sfx[name]) {
+    sfx[name].currentTime = 0;
+    sfx[name].play().catch(() => {});
+  }
+}
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('button, .banner-nav-item, .banner-card');
+  if (btn) {
+    const id = btn.id || '';
+    const classList = btn.classList;
+    
+    if (id === 'collection-open-btn') {
+      playSFX('collectionModal');
+      return;
+    } else if (id === 'close-modal-btn' || id === 'col-back-btn' || id === 'settings-close-btn' || id === 'skip-reveal-btn' || id === 'collect-btn') {
+      playSFX('back');
+      return;
+    } else if (classList.contains('banner-nav-item') || classList.contains('banner-card')) {
+      playSFX('openWish');
+      return;
+    }
+  }
+  // Fallback for random taps and any other unhandled buttons
+  playSFX('select');
+}, true);
 
 function applyCursorClass(cursorName) {
   document.body.className = document.body.className.split(' ').filter(c => !c.startsWith('cursor-')).join(' ');
@@ -145,6 +186,18 @@ function initSettings() {
     const vol = parseFloat(e.target.value);
     document.getElementById('bg-music').volume = vol;
     gs.volume = vol;
+    saveState();
+  });
+
+  const sfxSlider = document.getElementById('sfx-slider');
+  const initialSfxVol = gs.sfxVolume ?? 0.5;
+  sfxSlider.value = initialSfxVol;
+  Object.values(sfx).forEach(a => a.volume = initialSfxVol);
+  
+  sfxSlider.addEventListener('input', (e) => {
+    const vol = parseFloat(e.target.value);
+    Object.values(sfx).forEach(a => a.volume = vol);
+    gs.sfxVolume = vol;
     saveState();
   });
 
@@ -1033,6 +1086,42 @@ function showReveal(results) {
   }
 }
 
+function playPullStartVideo(onComplete) {
+  const container = document.getElementById('pull-start-video-container');
+  const video = document.getElementById('pull-start-video');
+  const bgMusic = document.getElementById('bg-music');
+
+  container.style.display = 'block';
+  // Force reflow
+  container.offsetHeight;
+  container.classList.add('active');
+
+  video.src = 'assets/ui/animations/pull_start.mp4';
+  
+  const finish = () => {
+    video.removeEventListener('ended', finish);
+    container.removeEventListener('click', finish);
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    
+    container.classList.remove('active');
+    setTimeout(() => {
+      container.style.display = 'none';
+      onComplete();
+    }, 500); // fade out duration
+  };
+
+  video.addEventListener('ended', finish);
+  // Skippable via click
+  container.addEventListener('click', finish);
+
+  video.play().catch(e => {
+    console.warn("Pull start video failed to play:", e);
+    finish();
+  });
+}
+
 function playPreRevealVideo(result, onComplete) {
   if (result.rarity !== '5star') {
     return onComplete();
@@ -1108,6 +1197,7 @@ function playSingleCardAnimation(result, container, onComplete) {
 
   pushTimeout(() => {
     wrapper.querySelector('.reveal-card').classList.add('flipped');
+    playSFX('pullReveal');
   }, 830);
 
   pushTimeout(() => {
@@ -1164,6 +1254,7 @@ function showSummaryScreen() {
     wrapper.querySelector('.card-glow').classList.add('visible');
   });
 
+  playSFX('pullRevealAll');
   collectBtn.classList.add('visible');
 }
 
@@ -1210,12 +1301,14 @@ function initEvents() {
   // Settings Modal & Reset
   initSettings();
 
-  // Pull ×1
+  // Pull x1
   document.getElementById('pull-1-btn').addEventListener('click', () => {
     const rem = getRemainingPulls();
     if (rem < 1) { showToast('No pulls remaining today! Reset in ' + getCountdownStr()); return; }
     const results = performPulls(1, currentBanner);
-    showReveal(results);
+    playPullStartVideo(() => {
+      showReveal(results);
+    });
   });
 
   // Pull ×10
@@ -1226,7 +1319,9 @@ function initEvents() {
       return;
     }
     const results = performPulls(10, currentBanner);
-    showReveal(results);
+    playPullStartVideo(() => {
+      showReveal(results);
+    });
   });
 
   document.getElementById('skip-reveal-btn').addEventListener('click', () => {

@@ -191,6 +191,7 @@ function initCollection() {
     const count = gs.collection[cardName] || 0;
     const currentRank = gs.ranks[cardName] || 0;
     if (count > currentRank + 1 && currentRank < 3) {
+      playSFX('collectionModal');
       gs.ranks[cardName] = currentRank + 1;
       saveState();
       renderCollection();
