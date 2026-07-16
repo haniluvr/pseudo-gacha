@@ -2700,6 +2700,7 @@ body.cursor-zayne * {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 
 .col-card-art {
