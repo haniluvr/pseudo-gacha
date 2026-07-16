@@ -99,8 +99,9 @@ svg {
 /* ── APP SHELL ───────────────────────────────────────────── */
 #app {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   background: radial-gradient(ellipse 140% 90% at 50% -10%, #1c1c5a 0%, #0e0e2e 50%, #080818 100%);
 }
@@ -3123,6 +3124,8 @@ body.cursor-zayne * {
   /* 1-pull card stays centered but scales down */
   .layout-1 .reveal-card {
     width: min(240px, 72vw);
+    max-height: 60vh;
+    margin-top: 32px;
   }
 
   /* ── COLLECT ALL BUTTON ────────────────────────────────── */
@@ -3199,18 +3202,16 @@ body.cursor-zayne * {
     border-bottom: none;
   }
 
-  /* Grid: flex layout for mobile cards */
+  /* Grid: 3 columns for mobile cards */
   .col-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 14px 12px 60px;
   }
 
   .col-card {
-    flex-grow: 1;
-    flex-basis: calc(33.333% - 10px);
-    max-width: 50%;
+    max-width: 100%;
   }
 
   /* Reduce star icon size to fit smaller cards */
@@ -3279,6 +3280,6 @@ body.cursor-zayne * {
   .col-modal-overlay,
   .settings-overlay {
     padding-top: max(16px, env(safe-area-inset-top));
-    padding-bottom: max(16px, env(safe-area-inset-bottom));
+    padding-bottom: max(36px, env(safe-area-inset-bottom));
   }
 }
