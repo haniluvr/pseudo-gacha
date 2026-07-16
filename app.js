@@ -74,24 +74,52 @@ const BASE_RATE_5       = 0.01;      // 1% base 5★ rate
 const BASE_RATE_4       = 0.07;      // 7% base 4★ rate
 const MAX_DAILY_PULLS   = 250;       // per banner per day
 // --- AUDIO SFX ---
-const sfx = {
-  back: new Audio('assets/audio-cue/back_cue.mp3'),
-  collectionModal: new Audio('assets/audio-cue/collection_modal_cue.mp3'),
-  openWish: new Audio('assets/audio-cue/open_wish_cue.mp3'),
-  pullReveal: new Audio('assets/audio-cue/pull_reveal_cue.mp3'),
-  pullRevealAll: new Audio('assets/audio-cue/pull_reveal_all_cue.mp3'),
-  select: new Audio('assets/audio-cue/select_cue.mp3')
+let audioCtx = null;
+const sfxBuffers = {};
+const sfxUrls = {
+  back: 'assets/audio-cue/back_cue.mp3',
+  collectionModal: 'assets/audio-cue/collection_modal_cue.mp3',
+  openWish: 'assets/audio-cue/open_wish_cue.mp3',
+  pullReveal: 'assets/audio-cue/pull_reveal_cue.mp3',
+  pullRevealAll: 'assets/audio-cue/pull_reveal_all_cue.mp3',
+  select: 'assets/audio-cue/select_cue.mp3',
+  pullStart: 'assets/audio-cue/pull_start_cue.mp3'
 };
-Object.values(sfx).forEach(a => {
-  a.volume = 0.5; // Will be overridden in initSettings once gs is loaded
-  a.preload = 'auto';
-});
+
+async function initSFX() {
+  if (audioCtx) return;
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  for (const [key, url] of Object.entries(sfxUrls)) {
+    try {
+      const response = await fetch(url);
+      const arrayBuffer = await response.arrayBuffer();
+      sfxBuffers[key] = await audioCtx.decodeAudioData(arrayBuffer);
+    } catch(e) {
+      console.error("Failed to load sfx:", key, e);
+    }
+  }
+}
+
+document.addEventListener('click', () => {
+  if (!audioCtx) initSFX();
+  else if (audioCtx.state === 'suspended') audioCtx.resume();
+}, { once: true, capture: true });
 
 function playSFX(name) {
-  if (sfx[name]) {
-    sfx[name].currentTime = 0;
-    sfx[name].play().catch(() => {});
+  if (!audioCtx || !sfxBuffers[name]) {
+    // If context not ready, try fallback
+    if (!audioCtx) initSFX().then(() => playSFX(name));
+    return;
   }
+  const source = audioCtx.createBufferSource();
+  source.buffer = sfxBuffers[name];
+  
+  const gainNode = audioCtx.createGain();
+  gainNode.gain.value = gs.sfxVolume ?? 0.5;
+  
+  source.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+  source.start(0);
 }
 
 document.addEventListener('click', (e) => {
@@ -192,11 +220,9 @@ function initSettings() {
   const sfxSlider = document.getElementById('sfx-slider');
   const initialSfxVol = gs.sfxVolume ?? 0.5;
   sfxSlider.value = initialSfxVol;
-  Object.values(sfx).forEach(a => a.volume = initialSfxVol);
   
   sfxSlider.addEventListener('input', (e) => {
     const vol = parseFloat(e.target.value);
-    Object.values(sfx).forEach(a => a.volume = vol);
     gs.sfxVolume = vol;
     saveState();
   });
@@ -1097,6 +1123,8 @@ function playPullStartVideo(onComplete) {
   container.classList.add('active');
 
   video.src = 'assets/ui/animations/pull_start.mp4';
+  video.muted = true;
+  playSFX('pullStart');
   
   const finish = () => {
     video.removeEventListener('ended', finish);
