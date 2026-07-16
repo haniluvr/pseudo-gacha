@@ -236,7 +236,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/borrowed promise.png",
+    "assetPath": "assets/caleb/four-star/lunar/borrowed promise.webp",
     "cardName": "Borrowed Promise",
     "isVideo": false
   },
@@ -246,7 +246,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/burnline.png",
+    "assetPath": "assets/caleb/four-star/lunar/burnline.webp",
     "cardName": "Burnline",
     "isVideo": false
   },
@@ -256,7 +256,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/chasing summer.png",
+    "assetPath": "assets/caleb/four-star/lunar/chasing summer.webp",
     "cardName": "Chasing Summer",
     "isVideo": false
   },
@@ -266,7 +266,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/deceptive solitude.png",
+    "assetPath": "assets/caleb/four-star/lunar/deceptive solitude.webp",
     "cardName": "Deceptive Solitude",
     "isVideo": false
   },
@@ -276,7 +276,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/held orchard.png",
+    "assetPath": "assets/caleb/four-star/lunar/held orchard.webp",
     "cardName": "Held Orchard",
     "isVideo": false
   },
@@ -286,7 +286,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/intertwined gold.png",
+    "assetPath": "assets/caleb/four-star/lunar/intertwined gold.webp",
     "cardName": "Intertwined Gold",
     "isVideo": false
   },
@@ -296,7 +296,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/skyline.png",
+    "assetPath": "assets/caleb/four-star/lunar/skyline.webp",
     "cardName": "Skyline",
     "isVideo": false
   },
@@ -306,7 +306,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/spotlit gaze.png",
+    "assetPath": "assets/caleb/four-star/lunar/spotlit gaze.webp",
     "cardName": "Spotlit Gaze",
     "isVideo": false
   },
@@ -316,7 +316,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/stage observer.png",
+    "assetPath": "assets/caleb/four-star/lunar/stage observer.webp",
     "cardName": "Stage Observer",
     "isVideo": false
   },
@@ -326,7 +326,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/summer's echo.png",
+    "assetPath": "assets/caleb/four-star/lunar/summer's echo.webp",
     "cardName": "Summer's Echo",
     "isVideo": false
   },
@@ -336,7 +336,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/verdant wetlands.png",
+    "assetPath": "assets/caleb/four-star/lunar/verdant wetlands.webp",
     "cardName": "Verdant Wetlands",
     "isVideo": false
   },
@@ -346,7 +346,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/lunar/verified rumor.png",
+    "assetPath": "assets/caleb/four-star/lunar/verified rumor.webp",
     "cardName": "Verified Rumor",
     "isVideo": false
   },
@@ -356,7 +356,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/solar/duskshard dreams.png",
+    "assetPath": "assets/caleb/four-star/solar/duskshard dreams.webp",
     "cardName": "Duskshard Dreams",
     "isVideo": false
   },
@@ -366,7 +366,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/solar/duskshard lotus.png",
+    "assetPath": "assets/caleb/four-star/solar/duskshard lotus.webp",
     "cardName": "Duskshard Lotus",
     "isVideo": false
   },
@@ -376,7 +376,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/solar/farewell dreamscape.png",
+    "assetPath": "assets/caleb/four-star/solar/farewell dreamscape.webp",
     "cardName": "Farewell Dreamscape",
     "isVideo": false
   },
@@ -386,7 +386,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/solar/farewell intimacy.png",
+    "assetPath": "assets/caleb/four-star/solar/farewell intimacy.webp",
     "cardName": "Farewell Intimacy",
     "isVideo": false
   },
@@ -396,7 +396,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/solar/longtime moments.png",
+    "assetPath": "assets/caleb/four-star/solar/longtime moments.webp",
     "cardName": "Longtime Moments",
     "isVideo": false
   },
@@ -406,7 +406,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/four-star/solar/longtime yesterday.png",
+    "assetPath": "assets/caleb/four-star/solar/longtime yesterday.webp",
     "cardName": "Longtime Yesterday",
     "isVideo": false
   },
@@ -416,7 +416,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/lunar/distant dreams.png",
+    "assetPath": "assets/caleb/three-star/lunar/distant dreams.webp",
     "cardName": "Distant Dreams",
     "isVideo": false
   },
@@ -426,7 +426,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/lunar/his gravity.png",
+    "assetPath": "assets/caleb/three-star/lunar/his gravity.webp",
     "cardName": "His Gravity",
     "isVideo": false
   },
@@ -436,7 +436,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/lunar/literary immersion.png",
+    "assetPath": "assets/caleb/three-star/lunar/literary immersion.webp",
     "cardName": "Literary Immersion",
     "isVideo": false
   },
@@ -446,7 +446,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/lunar/lotus bond.png",
+    "assetPath": "assets/caleb/three-star/lunar/lotus bond.webp",
     "cardName": "Lotus Bond",
     "isVideo": false
   },
@@ -456,7 +456,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/lunar/maximum energy.png",
+    "assetPath": "assets/caleb/three-star/lunar/maximum energy.webp",
     "cardName": "Maximum Energy",
     "isVideo": false
   },
@@ -466,7 +466,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/lunar/skyward flair.png",
+    "assetPath": "assets/caleb/three-star/lunar/skyward flair.webp",
     "cardName": "Skyward Flair",
     "isVideo": false
   },
@@ -476,7 +476,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/lunar/stay in touch.png",
+    "assetPath": "assets/caleb/three-star/lunar/stay in touch.webp",
     "cardName": "Stay In Touch",
     "isVideo": false
   },
@@ -486,7 +486,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/lunar/the termination.png",
+    "assetPath": "assets/caleb/three-star/lunar/the termination.webp",
     "cardName": "The Termination",
     "isVideo": false
   },
@@ -496,7 +496,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/solar/critical strike.png",
+    "assetPath": "assets/caleb/three-star/solar/critical strike.webp",
     "cardName": "Critical Strike",
     "isVideo": false
   },
@@ -506,7 +506,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/caleb/three-star/solar/perfect apple.png",
+    "assetPath": "assets/caleb/three-star/solar/perfect apple.webp",
     "cardName": "Perfect Apple",
     "isVideo": false
   },
@@ -816,7 +816,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/afternoon arclight.png",
+    "assetPath": "assets/rafayel/four-star/lunar/afternoon arclight.webp",
     "cardName": "Afternoon Arclight",
     "isVideo": false
   },
@@ -826,7 +826,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/banquet ablaze.png",
+    "assetPath": "assets/rafayel/four-star/lunar/banquet ablaze.webp",
     "cardName": "Banquet Ablaze",
     "isVideo": false
   },
@@ -836,7 +836,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/dangerously close.png",
+    "assetPath": "assets/rafayel/four-star/lunar/dangerously close.webp",
     "cardName": "Dangerously Close",
     "isVideo": false
   },
@@ -846,7 +846,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/entwined.png",
+    "assetPath": "assets/rafayel/four-star/lunar/entwined.webp",
     "cardName": "Entwined",
     "isVideo": false
   },
@@ -856,7 +856,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/eventide recitative.png",
+    "assetPath": "assets/rafayel/four-star/lunar/eventide recitative.webp",
     "cardName": "Eventide Recitative",
     "isVideo": false
   },
@@ -866,7 +866,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/flowery words.png",
+    "assetPath": "assets/rafayel/four-star/lunar/flowery words.webp",
     "cardName": "Flowery Words",
     "isVideo": false
   },
@@ -876,7 +876,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/fragrant dream.png",
+    "assetPath": "assets/rafayel/four-star/lunar/fragrant dream.webp",
     "cardName": "Fragrant Dream",
     "isVideo": false
   },
@@ -886,7 +886,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/glistening hearts.png",
+    "assetPath": "assets/rafayel/four-star/lunar/glistening hearts.webp",
     "cardName": "Glistening Hearts",
     "isVideo": false
   },
@@ -896,7 +896,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/hearty knock.png",
+    "assetPath": "assets/rafayel/four-star/lunar/hearty knock.webp",
     "cardName": "Hearty Knock",
     "isVideo": false
   },
@@ -906,7 +906,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/hidden shadow.png",
+    "assetPath": "assets/rafayel/four-star/lunar/hidden shadow.webp",
     "cardName": "Hidden Shadow",
     "isVideo": false
   },
@@ -916,7 +916,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/ivory nightfall.png",
+    "assetPath": "assets/rafayel/four-star/lunar/ivory nightfall.webp",
     "cardName": "Ivory Nightfall",
     "isVideo": false
   },
@@ -926,7 +926,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/journey seeker.png",
+    "assetPath": "assets/rafayel/four-star/lunar/journey seeker.webp",
     "cardName": "Journey Seeker",
     "isVideo": false
   },
@@ -936,7 +936,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/lost in your eyes.png",
+    "assetPath": "assets/rafayel/four-star/lunar/lost in your eyes.webp",
     "cardName": "Lost In Your Eyes",
     "isVideo": false
   },
@@ -946,7 +946,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/love's silhouette.png",
+    "assetPath": "assets/rafayel/four-star/lunar/love's silhouette.webp",
     "cardName": "Love's Silhouette",
     "isVideo": false
   },
@@ -956,7 +956,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/myths.png",
+    "assetPath": "assets/rafayel/four-star/lunar/myths.webp",
     "cardName": "Myths",
     "isVideo": false
   },
@@ -966,7 +966,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/ocean at night.png",
+    "assetPath": "assets/rafayel/four-star/lunar/ocean at night.webp",
     "cardName": "Ocean At Night",
     "isVideo": false
   },
@@ -976,7 +976,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/oceanside exchange.png",
+    "assetPath": "assets/rafayel/four-star/lunar/oceanside exchange.webp",
     "cardName": "Oceanside Exchange",
     "isVideo": false
   },
@@ -986,7 +986,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/promised wildfire.png",
+    "assetPath": "assets/rafayel/four-star/lunar/promised wildfire.webp",
     "cardName": "Promised Wildfire",
     "isVideo": false
   },
@@ -996,7 +996,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/scarlet invitation.png",
+    "assetPath": "assets/rafayel/four-star/lunar/scarlet invitation.webp",
     "cardName": "Scarlet Invitation",
     "isVideo": false
   },
@@ -1006,7 +1006,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/scorching rain.png",
+    "assetPath": "assets/rafayel/four-star/lunar/scorching rain.webp",
     "cardName": "Scorching Rain",
     "isVideo": false
   },
@@ -1016,7 +1016,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/sunlit raindrops.png",
+    "assetPath": "assets/rafayel/four-star/lunar/sunlit raindrops.webp",
     "cardName": "Sunlit Raindrops",
     "isVideo": false
   },
@@ -1026,7 +1026,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/tipsy.png",
+    "assetPath": "assets/rafayel/four-star/lunar/tipsy.webp",
     "cardName": "Tipsy",
     "isVideo": false
   },
@@ -1036,7 +1036,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/transparent ocean.png",
+    "assetPath": "assets/rafayel/four-star/lunar/transparent ocean.webp",
     "cardName": "Transparent Ocean",
     "isVideo": false
   },
@@ -1046,7 +1046,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/trueheart flip.png",
+    "assetPath": "assets/rafayel/four-star/lunar/trueheart flip.webp",
     "cardName": "Trueheart Flip",
     "isVideo": false
   },
@@ -1056,7 +1056,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/vesperine glimmer.png",
+    "assetPath": "assets/rafayel/four-star/lunar/vesperine glimmer.webp",
     "cardName": "Vesperine Glimmer",
     "isVideo": false
   },
@@ -1066,7 +1066,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/whalefall lament.png",
+    "assetPath": "assets/rafayel/four-star/lunar/whalefall lament.webp",
     "cardName": "Whalefall Lament",
     "isVideo": false
   },
@@ -1076,7 +1076,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/lunar/when light falls.png",
+    "assetPath": "assets/rafayel/four-star/lunar/when light falls.webp",
     "cardName": "When Light Falls",
     "isVideo": false
   },
@@ -1086,7 +1086,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/daybreak's touch.png",
+    "assetPath": "assets/rafayel/four-star/solar/daybreak's touch.webp",
     "cardName": "Daybreak's Touch",
     "isVideo": false
   },
@@ -1096,7 +1096,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/heartfelt game.png",
+    "assetPath": "assets/rafayel/four-star/solar/heartfelt game.webp",
     "cardName": "Heartfelt Game",
     "isVideo": false
   },
@@ -1106,7 +1106,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/heartfelt moment.png",
+    "assetPath": "assets/rafayel/four-star/solar/heartfelt moment.webp",
     "cardName": "Heartfelt Moment",
     "isVideo": false
   },
@@ -1116,7 +1116,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/radiant halo.png",
+    "assetPath": "assets/rafayel/four-star/solar/radiant halo.webp",
     "cardName": "Radiant Halo",
     "isVideo": false
   },
@@ -1126,7 +1126,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/radiant heart.png",
+    "assetPath": "assets/rafayel/four-star/solar/radiant heart.webp",
     "cardName": "Radiant Heart",
     "isVideo": false
   },
@@ -1136,7 +1136,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/rainbow strokes.png",
+    "assetPath": "assets/rafayel/four-star/solar/rainbow strokes.webp",
     "cardName": "Rainbow Strokes",
     "isVideo": false
   },
@@ -1146,7 +1146,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/sapphire dream.png",
+    "assetPath": "assets/rafayel/four-star/solar/sapphire dream.webp",
     "cardName": "Sapphire Dream",
     "isVideo": false
   },
@@ -1156,7 +1156,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/sapphire scar.png",
+    "assetPath": "assets/rafayel/four-star/solar/sapphire scar.webp",
     "cardName": "Sapphire Scar",
     "isVideo": false
   },
@@ -1166,7 +1166,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/tidefall allure.png",
+    "assetPath": "assets/rafayel/four-star/solar/tidefall allure.webp",
     "cardName": "Tidefall Allure",
     "isVideo": false
   },
@@ -1176,7 +1176,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/four-star/solar/tidefall waves.png",
+    "assetPath": "assets/rafayel/four-star/solar/tidefall waves.webp",
     "cardName": "Tidefall Waves",
     "isVideo": false
   },
@@ -1186,7 +1186,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/backlight.png",
+    "assetPath": "assets/rafayel/three-star/lunar/backlight.webp",
     "cardName": "Backlight",
     "isVideo": false
   },
@@ -1196,7 +1196,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/bloom gaze.png",
+    "assetPath": "assets/rafayel/three-star/lunar/bloom gaze.webp",
     "cardName": "Bloom Gaze",
     "isVideo": false
   },
@@ -1206,7 +1206,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/cherished moment.png",
+    "assetPath": "assets/rafayel/three-star/lunar/cherished moment.webp",
     "cardName": "Cherished Moment",
     "isVideo": false
   },
@@ -1216,7 +1216,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/dawn's melody.png",
+    "assetPath": "assets/rafayel/three-star/lunar/dawn's melody.webp",
     "cardName": "Dawn's Melody",
     "isVideo": false
   },
@@ -1226,7 +1226,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/distant prayer.png",
+    "assetPath": "assets/rafayel/three-star/lunar/distant prayer.webp",
     "cardName": "Distant Prayer",
     "isVideo": false
   },
@@ -1236,7 +1236,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/do not disturb.png",
+    "assetPath": "assets/rafayel/three-star/lunar/do not disturb.webp",
     "cardName": "Do Not Disturb",
     "isVideo": false
   },
@@ -1246,7 +1246,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/in your eyes.png",
+    "assetPath": "assets/rafayel/three-star/lunar/in your eyes.webp",
     "cardName": "In Your Eyes",
     "isVideo": false
   },
@@ -1256,7 +1256,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/left on read.png",
+    "assetPath": "assets/rafayel/three-star/lunar/left on read.webp",
     "cardName": "Left On Read",
     "isVideo": false
   },
@@ -1266,7 +1266,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/quick sketch.png",
+    "assetPath": "assets/rafayel/three-star/lunar/quick sketch.webp",
     "cardName": "Quick Sketch",
     "isVideo": false
   },
@@ -1276,7 +1276,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/secret.png",
+    "assetPath": "assets/rafayel/three-star/lunar/secret.webp",
     "cardName": "Secret",
     "isVideo": false
   },
@@ -1286,7 +1286,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/social occasion.png",
+    "assetPath": "assets/rafayel/three-star/lunar/social occasion.webp",
     "cardName": "Social Occasion",
     "isVideo": false
   },
@@ -1296,7 +1296,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/swimming hearts.png",
+    "assetPath": "assets/rafayel/three-star/lunar/swimming hearts.webp",
     "cardName": "Swimming Hearts",
     "isVideo": false
   },
@@ -1306,7 +1306,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/take care of me.png",
+    "assetPath": "assets/rafayel/three-star/lunar/take care of me.webp",
     "cardName": "Take Care Of Me",
     "isVideo": false
   },
@@ -1316,7 +1316,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/thinking.png",
+    "assetPath": "assets/rafayel/three-star/lunar/thinking.webp",
     "cardName": "Thinking",
     "isVideo": false
   },
@@ -1326,7 +1326,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/troubled.png",
+    "assetPath": "assets/rafayel/three-star/lunar/troubled.webp",
     "cardName": "Troubled",
     "isVideo": false
   },
@@ -1336,7 +1336,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/trump card.png",
+    "assetPath": "assets/rafayel/three-star/lunar/trump card.webp",
     "cardName": "Trump Card",
     "isVideo": false
   },
@@ -1346,7 +1346,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/whatcha doing.png",
+    "assetPath": "assets/rafayel/three-star/lunar/whatcha doing.webp",
     "cardName": "Whatcha Doing",
     "isVideo": false
   },
@@ -1356,7 +1356,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/lunar/wish granted.png",
+    "assetPath": "assets/rafayel/three-star/lunar/wish granted.webp",
     "cardName": "Wish Granted",
     "isVideo": false
   },
@@ -1366,7 +1366,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/solar/come with me.png",
+    "assetPath": "assets/rafayel/three-star/solar/come with me.webp",
     "cardName": "Come With Me",
     "isVideo": false
   },
@@ -1376,7 +1376,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/solar/inspiration search.png",
+    "assetPath": "assets/rafayel/three-star/solar/inspiration search.webp",
     "cardName": "Inspiration Search",
     "isVideo": false
   },
@@ -1386,7 +1386,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/solar/invitation.png",
+    "assetPath": "assets/rafayel/three-star/solar/invitation.webp",
     "cardName": "Invitation",
     "isVideo": false
   },
@@ -1396,7 +1396,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/solar/lame party.png",
+    "assetPath": "assets/rafayel/three-star/solar/lame party.webp",
     "cardName": "Lame Party",
     "isVideo": false
   },
@@ -1406,7 +1406,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/solar/not angry.png",
+    "assetPath": "assets/rafayel/three-star/solar/not angry.webp",
     "cardName": "Not Angry",
     "isVideo": false
   },
@@ -1416,7 +1416,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/rafayel/three-star/solar/perfect smile.png",
+    "assetPath": "assets/rafayel/three-star/solar/perfect smile.webp",
     "cardName": "Perfect Smile",
     "isVideo": false
   },
@@ -1706,7 +1706,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/approaching dusk.png",
+    "assetPath": "assets/sylus/four-star/lunar/approaching dusk.webp",
     "cardName": "Approaching Dusk",
     "isVideo": false
   },
@@ -1716,7 +1716,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/awaiting.png",
+    "assetPath": "assets/sylus/four-star/lunar/awaiting.webp",
     "cardName": "Awaiting",
     "isVideo": false
   },
@@ -1726,7 +1726,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/chaotic velocity.png",
+    "assetPath": "assets/sylus/four-star/lunar/chaotic velocity.webp",
     "cardName": "Chaotic Velocity",
     "isVideo": false
   },
@@ -1736,7 +1736,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/continuous symphony.png",
+    "assetPath": "assets/sylus/four-star/lunar/continuous symphony.webp",
     "cardName": "Continuous Symphony",
     "isVideo": false
   },
@@ -1746,7 +1746,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/freefall gambit.png",
+    "assetPath": "assets/sylus/four-star/lunar/freefall gambit.webp",
     "cardName": "Freefall Gambit",
     "isVideo": false
   },
@@ -1756,7 +1756,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/grasped dominion.png",
+    "assetPath": "assets/sylus/four-star/lunar/grasped dominion.webp",
     "cardName": "Grasped Dominion",
     "isVideo": false
   },
@@ -1766,7 +1766,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/greedy heart.png",
+    "assetPath": "assets/sylus/four-star/lunar/greedy heart.webp",
     "cardName": "Greedy Heart",
     "isVideo": false
   },
@@ -1776,7 +1776,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/melodic weave.png",
+    "assetPath": "assets/sylus/four-star/lunar/melodic weave.webp",
     "cardName": "Melodic Weave",
     "isVideo": false
   },
@@ -1786,7 +1786,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/nightglow.png",
+    "assetPath": "assets/sylus/four-star/lunar/nightglow.webp",
     "cardName": "Nightglow",
     "isVideo": false
   },
@@ -1796,7 +1796,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/no way out.png",
+    "assetPath": "assets/sylus/four-star/lunar/no way out.webp",
     "cardName": "No Way Out",
     "isVideo": false
   },
@@ -1806,7 +1806,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/ordinary traces.png",
+    "assetPath": "assets/sylus/four-star/lunar/ordinary traces.webp",
     "cardName": "Ordinary Traces",
     "isVideo": false
   },
@@ -1816,7 +1816,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/rosy hues.png",
+    "assetPath": "assets/sylus/four-star/lunar/rosy hues.webp",
     "cardName": "Rosy Hues",
     "isVideo": false
   },
@@ -1826,7 +1826,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/searing touch.png",
+    "assetPath": "assets/sylus/four-star/lunar/searing touch.webp",
     "cardName": "Searing Touch",
     "isVideo": false
   },
@@ -1836,7 +1836,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/shared bliss.png",
+    "assetPath": "assets/sylus/four-star/lunar/shared bliss.webp",
     "cardName": "Shared Bliss",
     "isVideo": false
   },
@@ -1846,7 +1846,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/tender curve.png",
+    "assetPath": "assets/sylus/four-star/lunar/tender curve.webp",
     "cardName": "Tender Curve",
     "isVideo": false
   },
@@ -1856,7 +1856,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/lunar/wild gaze.png",
+    "assetPath": "assets/sylus/four-star/lunar/wild gaze.webp",
     "cardName": "Wild Gaze",
     "isVideo": false
   },
@@ -1866,7 +1866,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/solar/bloodnight blaze.png",
+    "assetPath": "assets/sylus/four-star/solar/bloodnight blaze.webp",
     "cardName": "Bloodnight Blaze",
     "isVideo": false
   },
@@ -1876,7 +1876,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/solar/bloodnight drift.png",
+    "assetPath": "assets/sylus/four-star/solar/bloodnight drift.webp",
     "cardName": "Bloodnight Drift",
     "isVideo": false
   },
@@ -1886,7 +1886,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/solar/ivory prudence.png",
+    "assetPath": "assets/sylus/four-star/solar/ivory prudence.webp",
     "cardName": "Ivory Prudence",
     "isVideo": false
   },
@@ -1896,7 +1896,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/solar/ivory thirst.png",
+    "assetPath": "assets/sylus/four-star/solar/ivory thirst.webp",
     "cardName": "Ivory Thirst",
     "isVideo": false
   },
@@ -1906,7 +1906,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/solar/razor's dance.png",
+    "assetPath": "assets/sylus/four-star/solar/razor's dance.webp",
     "cardName": "Razor's Dance",
     "isVideo": false
   },
@@ -1916,7 +1916,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/four-star/solar/razor's grip.png",
+    "assetPath": "assets/sylus/four-star/solar/razor's grip.webp",
     "cardName": "Razor's Grip",
     "isVideo": false
   },
@@ -1926,7 +1926,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/lunar/composed.png",
+    "assetPath": "assets/sylus/three-star/lunar/composed.webp",
     "cardName": "Composed",
     "isVideo": false
   },
@@ -1936,7 +1936,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/lunar/dry ace.png",
+    "assetPath": "assets/sylus/three-star/lunar/dry ace.webp",
     "cardName": "Dry Ace",
     "isVideo": false
   },
@@ -1946,7 +1946,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/lunar/gifted arrival.png",
+    "assetPath": "assets/sylus/three-star/lunar/gifted arrival.webp",
     "cardName": "Gifted Arrival",
     "isVideo": false
   },
@@ -1956,7 +1956,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/lunar/gutsy rush.png",
+    "assetPath": "assets/sylus/three-star/lunar/gutsy rush.webp",
     "cardName": "Gutsy Rush",
     "isVideo": false
   },
@@ -1966,7 +1966,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/lunar/my decision.png",
+    "assetPath": "assets/sylus/three-star/lunar/my decision.webp",
     "cardName": "My Decision",
     "isVideo": false
   },
@@ -1976,7 +1976,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/lunar/reckless living.png",
+    "assetPath": "assets/sylus/three-star/lunar/reckless living.webp",
     "cardName": "Reckless Living",
     "isVideo": false
   },
@@ -1986,7 +1986,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/lunar/satiated.png",
+    "assetPath": "assets/sylus/three-star/lunar/satiated.webp",
     "cardName": "Satiated",
     "isVideo": false
   },
@@ -1996,7 +1996,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/lunar/shoo-in.png",
+    "assetPath": "assets/sylus/three-star/lunar/shoo-in.webp",
     "cardName": "Shoo-in",
     "isVideo": false
   },
@@ -2006,7 +2006,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/lunar/taking control.png",
+    "assetPath": "assets/sylus/three-star/lunar/taking control.webp",
     "cardName": "Taking Control",
     "isVideo": false
   },
@@ -2016,7 +2016,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/solar/in charge.png",
+    "assetPath": "assets/sylus/three-star/solar/in charge.webp",
     "cardName": "In Charge",
     "isVideo": false
   },
@@ -2026,9 +2026,69 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/sylus/three-star/solar/just encounter.png",
+    "assetPath": "assets/sylus/three-star/solar/just encounter.webp",
     "cardName": "Just Encounter",
     "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "standard",
+    "assetPath": "assets/valko/five-star/lunar/standard/cuddle exercise.mp4",
+    "cardName": "Cuddle Exercise",
+    "isVideo": true
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "standard",
+    "assetPath": "assets/valko/five-star/lunar/standard/duskfall prelude.mp4",
+    "cardName": "Duskfall Prelude",
+    "isVideo": true
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "standard",
+    "assetPath": "assets/valko/five-star/lunar/standard/paws first.mp4",
+    "cardName": "Paws First",
+    "isVideo": true
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "standard",
+    "assetPath": "assets/valko/five-star/lunar/standard/windrest plains.mp4",
+    "cardName": "Windrest Plains",
+    "isVideo": true
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "solar",
+    "bannerType": "standard",
+    "assetPath": "assets/valko/five-star/solar/standard/verdancy entwined.mp4",
+    "cardName": "Verdancy Entwined",
+    "isVideo": true
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "solar",
+    "bannerType": "standard",
+    "assetPath": "assets/valko/five-star/solar/standard/verdancy wildwind.mp4",
+    "cardName": "Verdancy Wildwind",
+    "isVideo": true
   },
   {
     "character": "valko",
@@ -2036,7 +2096,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/valko/four-star/lunar/charging password.png",
+    "assetPath": "assets/valko/four-star/lunar/charging password.webp",
     "cardName": "Charging Password",
     "isVideo": false
   },
@@ -2046,7 +2106,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/valko/four-star/lunar/foregone fall.png",
+    "assetPath": "assets/valko/four-star/lunar/foregone fall.webp",
     "cardName": "Foregone Fall",
     "isVideo": false
   },
@@ -2056,7 +2116,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/valko/four-star/lunar/tameless game.png",
+    "assetPath": "assets/valko/four-star/lunar/tameless game.webp",
     "cardName": "Tameless Game",
     "isVideo": false
   },
@@ -2066,7 +2126,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/valko/four-star/lunar/under staidrain.png",
+    "assetPath": "assets/valko/four-star/lunar/under staidrain.webp",
     "cardName": "Under Staidrain",
     "isVideo": false
   },
@@ -2076,7 +2136,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/valko/four-star/solar/by your side.png",
+    "assetPath": "assets/valko/four-star/solar/by your side.webp",
     "cardName": "By Your Side",
     "isVideo": false
   },
@@ -2086,7 +2146,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/valko/four-star/solar/in your arms.png",
+    "assetPath": "assets/valko/four-star/solar/in your arms.webp",
     "cardName": "In Your Arms",
     "isVideo": false
   },
@@ -2416,7 +2476,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/a captured moment.png",
+    "assetPath": "assets/xavier/four-star/lunar/a captured moment.webp",
     "cardName": "A Captured Moment",
     "isVideo": false
   },
@@ -2426,7 +2486,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/a day of snow.png",
+    "assetPath": "assets/xavier/four-star/lunar/a day of snow.webp",
     "cardName": "A Day Of Snow",
     "isVideo": false
   },
@@ -2436,7 +2496,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/celestial yearn.png",
+    "assetPath": "assets/xavier/four-star/lunar/celestial yearn.webp",
     "cardName": "Celestial Yearn",
     "isVideo": false
   },
@@ -2446,7 +2506,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/close feelings.png",
+    "assetPath": "assets/xavier/four-star/lunar/close feelings.webp",
     "cardName": "Close Feelings",
     "isVideo": false
   },
@@ -2456,7 +2516,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/dawn to dusk.png",
+    "assetPath": "assets/xavier/four-star/lunar/dawn to dusk.webp",
     "cardName": "Dawn To Dusk",
     "isVideo": false
   },
@@ -2466,7 +2526,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/dreaming.png",
+    "assetPath": "assets/xavier/four-star/lunar/dreaming.webp",
     "cardName": "Dreaming",
     "isVideo": false
   },
@@ -2476,7 +2536,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/dreams within reach.png",
+    "assetPath": "assets/xavier/four-star/lunar/dreams within reach.webp",
     "cardName": "Dreams Within Reach",
     "isVideo": false
   },
@@ -2486,7 +2546,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/enlightenment.png",
+    "assetPath": "assets/xavier/four-star/lunar/enlightenment.webp",
     "cardName": "Enlightenment",
     "isVideo": false
   },
@@ -2496,7 +2556,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/firelit embrace.png",
+    "assetPath": "assets/xavier/four-star/lunar/firelit embrace.webp",
     "cardName": "Firelit Embrace",
     "isVideo": false
   },
@@ -2506,7 +2566,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/galactic harmony.png",
+    "assetPath": "assets/xavier/four-star/lunar/galactic harmony.webp",
     "cardName": "Galactic Harmony",
     "isVideo": false
   },
@@ -2516,7 +2576,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/garden of secrets.png",
+    "assetPath": "assets/xavier/four-star/lunar/garden of secrets.webp",
     "cardName": "Garden Of Secrets",
     "isVideo": false
   },
@@ -2526,7 +2586,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/horizon's pulse.png",
+    "assetPath": "assets/xavier/four-star/lunar/horizon's pulse.webp",
     "cardName": "Horizon's Pulse",
     "isVideo": false
   },
@@ -2536,7 +2596,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/lost signal.png",
+    "assetPath": "assets/xavier/four-star/lunar/lost signal.webp",
     "cardName": "Lost Signal",
     "isVideo": false
   },
@@ -2546,7 +2606,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/love syndrome.png",
+    "assetPath": "assets/xavier/four-star/lunar/love syndrome.webp",
     "cardName": "Love Syndrome",
     "isVideo": false
   },
@@ -2556,7 +2616,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/moments refined.png",
+    "assetPath": "assets/xavier/four-star/lunar/moments refined.webp",
     "cardName": "Moments Refined",
     "isVideo": false
   },
@@ -2566,7 +2626,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/nocturnal hunt.png",
+    "assetPath": "assets/xavier/four-star/lunar/nocturnal hunt.webp",
     "cardName": "Nocturnal Hunt",
     "isVideo": false
   },
@@ -2576,7 +2636,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/perfect sunset.png",
+    "assetPath": "assets/xavier/four-star/lunar/perfect sunset.webp",
     "cardName": "Perfect Sunset",
     "isVideo": false
   },
@@ -2586,7 +2646,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/planned crush.png",
+    "assetPath": "assets/xavier/four-star/lunar/planned crush.webp",
     "cardName": "Planned Crush",
     "isVideo": false
   },
@@ -2596,7 +2656,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/seeker of light.png",
+    "assetPath": "assets/xavier/four-star/lunar/seeker of light.webp",
     "cardName": "Seeker Of Light",
     "isVideo": false
   },
@@ -2606,7 +2666,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/shimmering sunlight.png",
+    "assetPath": "assets/xavier/four-star/lunar/shimmering sunlight.webp",
     "cardName": "Shimmering Sunlight",
     "isVideo": false
   },
@@ -2616,7 +2676,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/spring letter.png",
+    "assetPath": "assets/xavier/four-star/lunar/spring letter.webp",
     "cardName": "Spring Letter",
     "isVideo": false
   },
@@ -2626,7 +2686,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/starry sound.png",
+    "assetPath": "assets/xavier/four-star/lunar/starry sound.webp",
     "cardName": "Starry Sound",
     "isVideo": false
   },
@@ -2636,7 +2696,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/sweetness pursuit.png",
+    "assetPath": "assets/xavier/four-star/lunar/sweetness pursuit.webp",
     "cardName": "Sweetness Pursuit",
     "isVideo": false
   },
@@ -2646,7 +2706,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/twofold heartbeat.png",
+    "assetPath": "assets/xavier/four-star/lunar/twofold heartbeat.webp",
     "cardName": "Twofold Heartbeat",
     "isVideo": false
   },
@@ -2656,7 +2716,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/unreturned traveler.png",
+    "assetPath": "assets/xavier/four-star/lunar/unreturned traveler.webp",
     "cardName": "Unreturned Traveler",
     "isVideo": false
   },
@@ -2666,7 +2726,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/warm wishes.png",
+    "assetPath": "assets/xavier/four-star/lunar/warm wishes.webp",
     "cardName": "Warm Wishes",
     "isVideo": false
   },
@@ -2676,7 +2736,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/lunar/winter's sun.png",
+    "assetPath": "assets/xavier/four-star/lunar/winter's sun.webp",
     "cardName": "Winter's Sun",
     "isVideo": false
   },
@@ -2686,7 +2746,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/an appointment.png",
+    "assetPath": "assets/xavier/four-star/solar/an appointment.webp",
     "cardName": "An Appointment",
     "isVideo": false
   },
@@ -2696,7 +2756,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/gilded dreams.png",
+    "assetPath": "assets/xavier/four-star/solar/gilded dreams.webp",
     "cardName": "Gilded Dreams",
     "isVideo": false
   },
@@ -2706,7 +2766,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/gilded mirage.png",
+    "assetPath": "assets/xavier/four-star/solar/gilded mirage.webp",
     "cardName": "Gilded Mirage",
     "isVideo": false
   },
@@ -2716,7 +2776,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/heartfelt code.png",
+    "assetPath": "assets/xavier/four-star/solar/heartfelt code.webp",
     "cardName": "Heartfelt Code",
     "isVideo": false
   },
@@ -2726,7 +2786,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/heartfelt guide.png",
+    "assetPath": "assets/xavier/four-star/solar/heartfelt guide.webp",
     "cardName": "Heartfelt Guide",
     "isVideo": false
   },
@@ -2736,7 +2796,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/moment's respite.png",
+    "assetPath": "assets/xavier/four-star/solar/moment's respite.webp",
     "cardName": "Moment's Respite",
     "isVideo": false
   },
@@ -2746,7 +2806,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/shining light.png",
+    "assetPath": "assets/xavier/four-star/solar/shining light.webp",
     "cardName": "Shining Light",
     "isVideo": false
   },
@@ -2756,7 +2816,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/shining traces.png",
+    "assetPath": "assets/xavier/four-star/solar/shining traces.webp",
     "cardName": "Shining Traces",
     "isVideo": false
   },
@@ -2766,7 +2826,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/veiled guardian.png",
+    "assetPath": "assets/xavier/four-star/solar/veiled guardian.webp",
     "cardName": "Veiled Guardian",
     "isVideo": false
   },
@@ -2776,7 +2836,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/four-star/solar/veiled starlight.png",
+    "assetPath": "assets/xavier/four-star/solar/veiled starlight.webp",
     "cardName": "Veiled Starlight",
     "isVideo": false
   },
@@ -2786,7 +2846,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/about to hit the ball.png",
+    "assetPath": "assets/xavier/three-star/lunar/about to hit the ball.webp",
     "cardName": "About To Hit The Ball",
     "isVideo": false
   },
@@ -2796,7 +2856,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/ardent threads.png",
+    "assetPath": "assets/xavier/three-star/lunar/ardent threads.webp",
     "cardName": "Ardent Threads",
     "isVideo": false
   },
@@ -2806,7 +2866,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/bad idea.png",
+    "assetPath": "assets/xavier/three-star/lunar/bad idea.webp",
     "cardName": "Bad Idea",
     "isVideo": false
   },
@@ -2816,7 +2876,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/calls.png",
+    "assetPath": "assets/xavier/three-star/lunar/calls.webp",
     "cardName": "Calls",
     "isVideo": false
   },
@@ -2826,7 +2886,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/combat ready.png",
+    "assetPath": "assets/xavier/three-star/lunar/combat ready.webp",
     "cardName": "Combat Ready",
     "isVideo": false
   },
@@ -2836,7 +2896,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/energy drink.png",
+    "assetPath": "assets/xavier/three-star/lunar/energy drink.webp",
     "cardName": "Energy Drink",
     "isVideo": false
   },
@@ -2846,7 +2906,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/guardian.png",
+    "assetPath": "assets/xavier/three-star/lunar/guardian.webp",
     "cardName": "Guardian",
     "isVideo": false
   },
@@ -2856,7 +2916,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/holding hands.png",
+    "assetPath": "assets/xavier/three-star/lunar/holding hands.webp",
     "cardName": "Holding Hands",
     "isVideo": false
   },
@@ -2866,7 +2926,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/listen.png",
+    "assetPath": "assets/xavier/three-star/lunar/listen.webp",
     "cardName": "Listen",
     "isVideo": false
   },
@@ -2876,7 +2936,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/nestle.png",
+    "assetPath": "assets/xavier/three-star/lunar/nestle.webp",
     "cardName": "Nestle",
     "isVideo": false
   },
@@ -2886,7 +2946,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/real look.png",
+    "assetPath": "assets/xavier/three-star/lunar/real look.webp",
     "cardName": "Real Look",
     "isVideo": false
   },
@@ -2896,7 +2956,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/recall.png",
+    "assetPath": "assets/xavier/three-star/lunar/recall.webp",
     "cardName": "Recall",
     "isVideo": false
   },
@@ -2906,7 +2966,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/reflection.png",
+    "assetPath": "assets/xavier/three-star/lunar/reflection.webp",
     "cardName": "Reflection",
     "isVideo": false
   },
@@ -2916,7 +2976,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/silent swipe.png",
+    "assetPath": "assets/xavier/three-star/lunar/silent swipe.webp",
     "cardName": "Silent Swipe",
     "isVideo": false
   },
@@ -2926,7 +2986,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/starry stroll.png",
+    "assetPath": "assets/xavier/three-star/lunar/starry stroll.webp",
     "cardName": "Starry Stroll",
     "isVideo": false
   },
@@ -2936,7 +2996,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/the rain.png",
+    "assetPath": "assets/xavier/three-star/lunar/the rain.webp",
     "cardName": "The Rain",
     "isVideo": false
   },
@@ -2946,7 +3006,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/lunar/unfading wish.png",
+    "assetPath": "assets/xavier/three-star/lunar/unfading wish.webp",
     "cardName": "Unfading Wish",
     "isVideo": false
   },
@@ -2956,7 +3016,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/solar/a break.png",
+    "assetPath": "assets/xavier/three-star/solar/a break.webp",
     "cardName": "A Break",
     "isVideo": false
   },
@@ -2966,7 +3026,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/solar/apple of my eye.png",
+    "assetPath": "assets/xavier/three-star/solar/apple of my eye.webp",
     "cardName": "Apple Of My Eye",
     "isVideo": false
   },
@@ -2976,7 +3036,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/solar/blade.png",
+    "assetPath": "assets/xavier/three-star/solar/blade.webp",
     "cardName": "Blade",
     "isVideo": false
   },
@@ -2986,7 +3046,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/solar/gaze.png",
+    "assetPath": "assets/xavier/three-star/solar/gaze.webp",
     "cardName": "Gaze",
     "isVideo": false
   },
@@ -2996,7 +3056,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/solar/good morning.png",
+    "assetPath": "assets/xavier/three-star/solar/good morning.webp",
     "cardName": "Good Morning",
     "isVideo": false
   },
@@ -3006,7 +3066,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/xavier/three-star/solar/heart-to-heart.png",
+    "assetPath": "assets/xavier/three-star/solar/heart-to-heart.webp",
     "cardName": "Heart-to-heart",
     "isVideo": false
   },
@@ -3326,7 +3386,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/5th intercostal space.png",
+    "assetPath": "assets/zayne/four-star/lunar/5th intercostal space.webp",
     "cardName": "5th Intercostal Space",
     "isVideo": false
   },
@@ -3336,7 +3396,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/a long night.png",
+    "assetPath": "assets/zayne/four-star/lunar/a long night.webp",
     "cardName": "A Long Night",
     "isVideo": false
   },
@@ -3346,7 +3406,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/beginning.png",
+    "assetPath": "assets/zayne/four-star/lunar/beginning.webp",
     "cardName": "Beginning",
     "isVideo": false
   },
@@ -3356,7 +3416,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/blooming hour.png",
+    "assetPath": "assets/zayne/four-star/lunar/blooming hour.webp",
     "cardName": "Blooming Hour",
     "isVideo": false
   },
@@ -3366,7 +3426,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/chasing silhouettes.png",
+    "assetPath": "assets/zayne/four-star/lunar/chasing silhouettes.webp",
     "cardName": "Chasing Silhouettes",
     "isVideo": false
   },
@@ -3376,7 +3436,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/cherished longing.png",
+    "assetPath": "assets/zayne/four-star/lunar/cherished longing.webp",
     "cardName": "Cherished Longing",
     "isVideo": false
   },
@@ -3386,7 +3446,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/dawn_s shadows.png",
+    "assetPath": "assets/zayne/four-star/lunar/dawn_s shadows.webp",
     "cardName": "Dawn's Shadows",
     "isVideo": false
   },
@@ -3396,7 +3456,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/delicacy.png",
+    "assetPath": "assets/zayne/four-star/lunar/delicacy.webp",
     "cardName": "Delicacy",
     "isVideo": false
   },
@@ -3406,7 +3466,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/destiny.png",
+    "assetPath": "assets/zayne/four-star/lunar/destiny.webp",
     "cardName": "Destiny",
     "isVideo": false
   },
@@ -3416,7 +3476,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/doomsday.png",
+    "assetPath": "assets/zayne/four-star/lunar/doomsday.webp",
     "cardName": "Doomsday",
     "isVideo": false
   },
@@ -3426,7 +3486,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/dream revisited.png",
+    "assetPath": "assets/zayne/four-star/lunar/dream revisited.webp",
     "cardName": "Dream Revisited",
     "isVideo": false
   },
@@ -3436,7 +3496,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/everlasting snowdrop.png",
+    "assetPath": "assets/zayne/four-star/lunar/everlasting snowdrop.webp",
     "cardName": "Everlasting Snowdrop",
     "isVideo": false
   },
@@ -3446,7 +3506,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/fleeting sweetness.png",
+    "assetPath": "assets/zayne/four-star/lunar/fleeting sweetness.webp",
     "cardName": "Fleeting Sweetness",
     "isVideo": false
   },
@@ -3456,7 +3516,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/fragmented dreams.png",
+    "assetPath": "assets/zayne/four-star/lunar/fragmented dreams.webp",
     "cardName": "Fragmented Dreams",
     "isVideo": false
   },
@@ -3466,7 +3526,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/frost salvation.png",
+    "assetPath": "assets/zayne/four-star/lunar/frost salvation.webp",
     "cardName": "Frost Salvation",
     "isVideo": false
   },
@@ -3476,7 +3536,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/glittering lights.png",
+    "assetPath": "assets/zayne/four-star/lunar/glittering lights.webp",
     "cardName": "Glittering Lights",
     "isVideo": false
   },
@@ -3486,7 +3546,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/holding autumn.png",
+    "assetPath": "assets/zayne/four-star/lunar/holding autumn.webp",
     "cardName": "Holding Autumn",
     "isVideo": false
   },
@@ -3496,7 +3556,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/morning drift.png",
+    "assetPath": "assets/zayne/four-star/lunar/morning drift.webp",
     "cardName": "Morning Drift",
     "isVideo": false
   },
@@ -3506,7 +3566,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/ramblings come true.png",
+    "assetPath": "assets/zayne/four-star/lunar/ramblings come true.webp",
     "cardName": "Ramblings Come True",
     "isVideo": false
   },
@@ -3516,7 +3576,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/secret fairytale.png",
+    "assetPath": "assets/zayne/four-star/lunar/secret fairytale.webp",
     "cardName": "Secret Fairytale",
     "isVideo": false
   },
@@ -3526,7 +3586,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/silent poem.png",
+    "assetPath": "assets/zayne/four-star/lunar/silent poem.webp",
     "cardName": "Silent Poem",
     "isVideo": false
   },
@@ -3536,7 +3596,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/spring remnants.png",
+    "assetPath": "assets/zayne/four-star/lunar/spring remnants.webp",
     "cardName": "Spring Remnants",
     "isVideo": false
   },
@@ -3546,7 +3606,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/stacked pulses.png",
+    "assetPath": "assets/zayne/four-star/lunar/stacked pulses.webp",
     "cardName": "Stacked Pulses",
     "isVideo": false
   },
@@ -3556,7 +3616,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/steamy proximity.png",
+    "assetPath": "assets/zayne/four-star/lunar/steamy proximity.webp",
     "cardName": "Steamy Proximity",
     "isVideo": false
   },
@@ -3566,7 +3626,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/surprise encounter.png",
+    "assetPath": "assets/zayne/four-star/lunar/surprise encounter.webp",
     "cardName": "Surprise Encounter",
     "isVideo": false
   },
@@ -3576,7 +3636,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/sweet conspiracy.png",
+    "assetPath": "assets/zayne/four-star/lunar/sweet conspiracy.webp",
     "cardName": "Sweet Conspiracy",
     "isVideo": false
   },
@@ -3586,7 +3646,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/lunar/thoughtful words.png",
+    "assetPath": "assets/zayne/four-star/lunar/thoughtful words.webp",
     "cardName": "Thoughtful Words",
     "isVideo": false
   },
@@ -3596,7 +3656,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/finale_s ache.png",
+    "assetPath": "assets/zayne/four-star/solar/finale_s ache.webp",
     "cardName": "Finale's Ache",
     "isVideo": false
   },
@@ -3606,7 +3666,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/finale_s perpetuity.png",
+    "assetPath": "assets/zayne/four-star/solar/finale_s perpetuity.webp",
     "cardName": "Finale's Perpetuity",
     "isVideo": false
   },
@@ -3616,7 +3676,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/forest_s breeze.png",
+    "assetPath": "assets/zayne/four-star/solar/forest_s breeze.webp",
     "cardName": "Forest's Breeze",
     "isVideo": false
   },
@@ -3626,7 +3686,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/forest_s slumber.png",
+    "assetPath": "assets/zayne/four-star/solar/forest_s slumber.webp",
     "cardName": "Forest's Slumber",
     "isVideo": false
   },
@@ -3636,7 +3696,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/heartfelt encounter.png",
+    "assetPath": "assets/zayne/four-star/solar/heartfelt encounter.webp",
     "cardName": "Heartfelt Encounter",
     "isVideo": false
   },
@@ -3646,7 +3706,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/heartfelt paradise.png",
+    "assetPath": "assets/zayne/four-star/solar/heartfelt paradise.webp",
     "cardName": "Heartfelt Paradise",
     "isVideo": false
   },
@@ -3656,7 +3716,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/neon night.png",
+    "assetPath": "assets/zayne/four-star/solar/neon night.webp",
     "cardName": "Neon Night",
     "isVideo": false
   },
@@ -3666,7 +3726,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/starry nocturne.png",
+    "assetPath": "assets/zayne/four-star/solar/starry nocturne.webp",
     "cardName": "Starry Nocturne",
     "isVideo": false
   },
@@ -3676,7 +3736,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/tranquil heart.png",
+    "assetPath": "assets/zayne/four-star/solar/tranquil heart.webp",
     "cardName": "Tranquil Heart",
     "isVideo": false
   },
@@ -3686,7 +3746,7 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/four-star/solar/tranquil moment.png",
+    "assetPath": "assets/zayne/four-star/solar/tranquil moment.webp",
     "cardName": "Tranquil Moment",
     "isVideo": false
   },
@@ -3696,7 +3756,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/aromatic.png",
+    "assetPath": "assets/zayne/three-star/lunar/aromatic.webp",
     "cardName": "Aromatic",
     "isVideo": false
   },
@@ -3706,7 +3766,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/clean-up.png",
+    "assetPath": "assets/zayne/three-star/lunar/clean-up.webp",
     "cardName": "Clean-up",
     "isVideo": false
   },
@@ -3716,7 +3776,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/crystal world.png",
+    "assetPath": "assets/zayne/three-star/lunar/crystal world.webp",
     "cardName": "Crystal World",
     "isVideo": false
   },
@@ -3726,7 +3786,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/demeanor.png",
+    "assetPath": "assets/zayne/three-star/lunar/demeanor.webp",
     "cardName": "Demeanor",
     "isVideo": false
   },
@@ -3736,7 +3796,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/doctor_s orders.png",
+    "assetPath": "assets/zayne/three-star/lunar/doctor_s orders.webp",
     "cardName": "Doctor's Orders",
     "isVideo": false
   },
@@ -3746,7 +3806,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/fated reunion.png",
+    "assetPath": "assets/zayne/three-star/lunar/fated reunion.webp",
     "cardName": "Fated Reunion",
     "isVideo": false
   },
@@ -3756,7 +3816,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/gaze from afar.png",
+    "assetPath": "assets/zayne/three-star/lunar/gaze from afar.webp",
     "cardName": "Gaze From Afar",
     "isVideo": false
   },
@@ -3766,7 +3826,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/glasses.png",
+    "assetPath": "assets/zayne/three-star/lunar/glasses.webp",
     "cardName": "Glasses",
     "isVideo": false
   },
@@ -3776,7 +3836,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/injection therapy.png",
+    "assetPath": "assets/zayne/three-star/lunar/injection therapy.webp",
     "cardName": "Injection Therapy",
     "isVideo": false
   },
@@ -3786,7 +3846,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/lost in thought.png",
+    "assetPath": "assets/zayne/three-star/lunar/lost in thought.webp",
     "cardName": "Lost In Thought",
     "isVideo": false
   },
@@ -3796,7 +3856,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/precious treasure.png",
+    "assetPath": "assets/zayne/three-star/lunar/precious treasure.webp",
     "cardName": "Precious Treasure",
     "isVideo": false
   },
@@ -3806,7 +3866,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/secrets of fate.png",
+    "assetPath": "assets/zayne/three-star/lunar/secrets of fate.webp",
     "cardName": "Secrets Of Fate",
     "isVideo": false
   },
@@ -3816,7 +3876,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/shining blessing.png",
+    "assetPath": "assets/zayne/three-star/lunar/shining blessing.webp",
     "cardName": "Shining Blessing",
     "isVideo": false
   },
@@ -3826,7 +3886,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/sweet burden.png",
+    "assetPath": "assets/zayne/three-star/lunar/sweet burden.webp",
     "cardName": "Sweet Burden",
     "isVideo": false
   },
@@ -3836,7 +3896,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/treasure in palm.png",
+    "assetPath": "assets/zayne/three-star/lunar/treasure in palm.webp",
     "cardName": "Treasure In Palm",
     "isVideo": false
   },
@@ -3846,7 +3906,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/waiting.png",
+    "assetPath": "assets/zayne/three-star/lunar/waiting.webp",
     "cardName": "Waiting",
     "isVideo": false
   },
@@ -3856,7 +3916,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/lunar/work plan.png",
+    "assetPath": "assets/zayne/three-star/lunar/work plan.webp",
     "cardName": "Work Plan",
     "isVideo": false
   },
@@ -3866,7 +3926,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/solar/auscultation.png",
+    "assetPath": "assets/zayne/three-star/solar/auscultation.webp",
     "cardName": "Auscultation",
     "isVideo": false
   },
@@ -3876,7 +3936,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/solar/checkup.png",
+    "assetPath": "assets/zayne/three-star/solar/checkup.webp",
     "cardName": "Checkup",
     "isVideo": false
   },
@@ -3886,7 +3946,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/solar/little world.png",
+    "assetPath": "assets/zayne/three-star/solar/little world.webp",
     "cardName": "Little World",
     "isVideo": false
   },
@@ -3896,7 +3956,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/solar/no.png",
+    "assetPath": "assets/zayne/three-star/solar/no.webp",
     "cardName": "No",
     "isVideo": false
   },
@@ -3906,7 +3966,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/solar/playing around.png",
+    "assetPath": "assets/zayne/three-star/solar/playing around.webp",
     "cardName": "Playing Around",
     "isVideo": false
   },
@@ -3916,7 +3976,7 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/zayne/three-star/solar/thoughts.png",
+    "assetPath": "assets/zayne/three-star/solar/thoughts.webp",
     "cardName": "Thoughts",
     "isVideo": false
   }

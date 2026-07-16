@@ -445,7 +445,7 @@ function resolveCard(rarityStr, bannerType) {
 
   let totalWeight = 0;
   const weights = finalPool.map(c => {
-    const w = c.character === 'valko' ? 1.50 : 1;
+    const w = (c.character === 'valko' && bannerType === 'limited') ? 1.50 : 1;
     totalWeight += w;
     return w;
   });
@@ -1144,7 +1144,6 @@ function playPullStartVideo(onComplete) {
   
   const finish = () => {
     video.removeEventListener('ended', finish);
-    container.removeEventListener('click', finish);
     video.pause();
     video.removeAttribute('src');
     video.load();
@@ -1157,8 +1156,6 @@ function playPullStartVideo(onComplete) {
   };
 
   video.addEventListener('ended', finish);
-  // Skippable via click
-  container.addEventListener('click', finish);
 
   video.play().catch(e => {
     console.warn("Pull start video failed to play:", e);
