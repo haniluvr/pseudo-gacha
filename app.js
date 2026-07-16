@@ -443,7 +443,23 @@ function resolveCard(rarityStr, bannerType) {
     }
   }
 
-  const selectedCard = finalPool[Math.floor(Math.random() * finalPool.length)];
+  let totalWeight = 0;
+  const weights = finalPool.map(c => {
+    const w = c.character === 'valko' ? 1.50 : 1;
+    totalWeight += w;
+    return w;
+  });
+
+  let r = Math.random() * totalWeight;
+  let selectedCard = finalPool[0];
+  for (let i = 0; i < finalPool.length; i++) {
+    r -= weights[i];
+    if (r <= 0) {
+      selectedCard = finalPool[i];
+      break;
+    }
+  }
+  
   return { ...selectedCard, charData: CHARACTERS[selectedCard.character] || CHARACTERS['xavier'] };
 }
 
@@ -922,7 +938,7 @@ function setupPullScreen(bannerType) {
     gzone.innerHTML = `
       <span class="guarantee-badge ${isGuaranteed ? 'gb-guaranteed' : 'gb-fifty'}">
         ${isGuaranteed
-          ? '✓ Featured character guaranteed next 5★'
+          ? '✓ Limited memory guaranteed next 5★'
           : '50/50 — Win for limited, lose for standard 5★'}
       </span>`;
   } else {
