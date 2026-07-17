@@ -81,6 +81,7 @@ const sfxUrls = {
   collectionModal: 'assets/audio-cue/collection_modal_cue.mp3',
   openWish: 'assets/audio-cue/open_wish_cue.mp3',
   pullReveal: 'assets/audio-cue/pull_reveal_cue.mp3',
+  pullRevealGold: 'assets/audio-cue/open_wish_gold_cue.mp3',
   pullRevealAll: 'assets/audio-cue/pull_reveal_all_cue.mp3',
   select: 'assets/audio-cue/select_cue.mp3',
   pullStart: 'assets/audio-cue/pull_start_cue.mp3'
@@ -100,10 +101,13 @@ async function initSFX() {
   }
 }
 
-document.addEventListener('click', () => {
+const unlockAudio = () => {
   if (!audioCtx) initSFX();
   else if (audioCtx.state === 'suspended') audioCtx.resume();
-}, { once: true, capture: true });
+};
+document.addEventListener('click', unlockAudio, { once: true, capture: true });
+document.addEventListener('pointerup', unlockAudio, { once: true, capture: true });
+document.addEventListener('touchstart', unlockAudio, { once: true, capture: true });
 
 function playSFX(name) {
   if (!audioCtx || !sfxBuffers[name]) {
@@ -1239,7 +1243,11 @@ function playSingleCardAnimation(result, container, onComplete) {
 
   pushTimeout(() => {
     wrapper.querySelector('.reveal-card').classList.add('flipped');
-    playSFX('pullReveal');
+    if (result.rarity === '5star') {
+      playSFX('pullRevealGold');
+    } else {
+      playSFX('pullReveal');
+    }
   }, 830);
 
   pushTimeout(() => {
