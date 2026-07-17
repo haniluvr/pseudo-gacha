@@ -2954,6 +2954,48 @@ body.cursor-zayne * {
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
 }
 
+.cd-footer-credit {
+  font-size: 14px;
+  color: var(--txt-2);
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-family: var(--font-m);
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+}
+
+.cd-credit-pipe {
+  opacity: 0.4;
+}
+
+.cd-credit-icons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.cd-credit-icons a {
+  color: var(--gold-lt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.cd-credit-icons a:hover {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+.cd-credit-icons svg {
+  width: 14px;
+  height: 14px;
+}
+
 .cd-art-wrap {
   position: relative;
   width: 260px;
@@ -3303,6 +3345,16 @@ body.cursor-zayne * {
 
   .cd-footer-name {
     font-size: 22px;
+  }
+
+  .cd-footer-credit {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .cd-credit-icons svg {
+    width: 12px;
+    height: 12px;
   }
 
   .cd-header-char {

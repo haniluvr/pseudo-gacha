@@ -706,6 +706,16 @@ const CARD_CATALOG = [
     "rarityStr": "5star",
     "type": "lunar",
     "bannerType": "standard",
+    "assetPath": "assets/rafayel/five-star/lunar/standard/before sunrise.temp.mp4",
+    "cardName": "Before Sunrise.temp",
+    "isVideo": true
+  },
+  {
+    "character": "rafayel",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "standard",
     "assetPath": "assets/rafayel/five-star/lunar/standard/blossoms.mp4",
     "cardName": "Blossoms",
     "isVideo": true
@@ -2035,6 +2045,36 @@ const CARD_CATALOG = [
     "rarity": 5,
     "rarityStr": "5star",
     "type": "lunar",
+    "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/morning confessions.mp4",
+    "cardName": "Morning Confessions",
+    "isVideo": true
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/pillow talk.mp4",
+    "cardName": "Pillow Talk",
+    "isVideo": true
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/restless instincts.mp4",
+    "cardName": "Restless Instincts",
+    "isVideo": true
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
     "bannerType": "standard",
     "assetPath": "assets/valko/five-star/lunar/standard/cuddle exercise.mp4",
     "cardName": "Cuddle Exercise",
@@ -2148,6 +2188,26 @@ const CARD_CATALOG = [
     "bannerType": "both",
     "assetPath": "assets/valko/four-star/solar/in your arms.webp",
     "cardName": "In Your Arms",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 3,
+    "rarityStr": "3star",
+    "type": "lunar",
+    "bannerType": "both",
+    "assetPath": "assets/valko/three-star/lunar/insomnia's embrace.webp",
+    "cardName": "Insomnia's Embrace",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 3,
+    "rarityStr": "3star",
+    "type": "solar",
+    "bannerType": "both",
+    "assetPath": "assets/valko/three-star/solar/chocolate day.webp",
+    "cardName": "Chocolate Day",
     "isVideo": false
   },
   {

@@ -1,5 +1,31 @@
 // collection.js
 
+const CARD_CREDITS = {
+  "Morning Confessions": {
+    artist: "b",
+    ig: "https://www.instagram.com/beejaws",
+    x: "https://x.com/beejawing"
+  },
+  "Pillow Talk": {
+    artist: "b",
+    ig: "https://www.instagram.com/beejaws",
+    x: "https://x.com/beejawing"
+  },
+  "Restless Instincts": {
+    artist: "b",
+    ig: "https://www.instagram.com/beejaws",
+    x: "https://x.com/beejawing"
+  },
+  "Insomnia's Embrace": {
+    artist: "Meimei",
+    x: "https://x.com/okojyomeimei"
+  },
+  "Chocolate Day": {
+    artist: "Kihaiu",
+    x: "https://x.com/Thekawacookiie"
+  }
+};
+
 function injectCollectionModal() {
   const modalHtml = `
     <div id="collection-modal" class="col-modal-overlay" aria-modal="true" role="dialog">
@@ -107,6 +133,7 @@ function injectCardDetailsModal() {
         <div class="cd-text-group">
           <div class="cd-header-char" id="cd-header-char"></div>
           <div class="cd-footer-name" id="cd-footer-name"></div>
+          <div class="cd-footer-credit" id="cd-footer-credit"></div>
         </div>
         <button class="rank-up-btn" id="rank-up-btn">Rank Up</button>
       </div>
@@ -239,7 +266,7 @@ function initCollection() {
         : `<svg class="col-type-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
 
       const artHtml = card.isVideo
-        ? `<video src="${card.assetPath}#t=0.001" class="col-card-media" loop muted playsinline preload="metadata"></video>`
+        ? `<video src="${card.assetPath}#t=0.001" class="col-card-media" loop muted playsinline preload="metadata" onloadedmetadata="this.currentTime=0.1;"></video>`
         : `<img src="${card.assetPath}" class="col-card-media" alt="${card.cardName}" loading="lazy">`;
 
       const item = document.createElement('div');
@@ -288,11 +315,30 @@ function initCollection() {
       : `<svg class="col-type-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
 
     const artHtml = card.isVideo
-      ? `<video src="${card.assetPath}" class="cd-card-media" loop muted autoplay playsinline></video>`
+      ? `<video src="${card.assetPath}" class="cd-card-media" loop muted autoplay playsinline onloadedmetadata="this.currentTime=0.1;"></video>`
       : `<img src="${card.assetPath}" class="cd-card-media" alt="${card.cardName}">`;
 
     document.getElementById('cd-header-char').textContent = charCapitalized;
     document.getElementById('cd-footer-name').textContent = card.cardName;
+
+    const cdCredit = document.getElementById('cd-footer-credit');
+    const cred = CARD_CREDITS[card.cardName];
+    if (cred) {
+      const igIcon = cred.ig ? `
+        <a href="${cred.ig}" target="_blank" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>` : '';
+      const xIcon = cred.x ? `
+        <a href="${cred.x}" target="_blank" title="X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>` : '';
+        
+      cdCredit.innerHTML = `<span>Art by: ${cred.artist}</span> <span class="cd-credit-pipe">|</span> <div class="cd-credit-icons">${igIcon}${xIcon}</div>`;
+      cdCredit.style.display = 'flex';
+    } else {
+      cdCredit.innerHTML = '';
+      cdCredit.style.display = 'none';
+    }
 
     artWrap.innerHTML = `
       ${artHtml}

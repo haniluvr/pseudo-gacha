@@ -1106,7 +1106,7 @@ function showReveal(results) {
     collectText.textContent = revealState.layout === 1 ? 'Collect' : 'Collect All';
   }
 
-  skipBtn.style.display = revealState.layout > 1 ? 'block' : 'none'; // Only show skip for 10-pull
+  skipBtn.style.display = revealState.layout === 1 ? 'none' : 'block';
   overlay.style.display = 'block'; // Always show overlay for click-to-skip
   
   clearParticles();
@@ -1128,7 +1128,7 @@ function showReveal(results) {
   }
 }
 
-function playPullStartVideo(onComplete) {
+function playPullStartVideo(results, onComplete) {
   const container = document.getElementById('pull-start-video-container');
   const video = document.getElementById('pull-start-video');
   const bgMusic = document.getElementById('bg-music');
@@ -1138,7 +1138,8 @@ function playPullStartVideo(onComplete) {
   container.offsetHeight;
   container.classList.add('active');
 
-  video.src = 'assets/ui/animations/pull_start.mp4';
+  const hasFiveStar = results.some(r => r.rarity === '5star');
+  video.src = hasFiveStar ? 'assets/ui/animations/pull_start_gold.mp4' : 'assets/ui/animations/pull_start.mp4';
   video.muted = true;
   playSFX('pullStart');
   
@@ -1348,7 +1349,7 @@ function initEvents() {
     const rem = getRemainingPulls();
     if (rem < 1) { showToast('No pulls remaining today! Reset in ' + getCountdownStr()); return; }
     const results = performPulls(1, currentBanner);
-    playPullStartVideo(() => {
+    playPullStartVideo(results, () => {
       showReveal(results);
     });
   });
@@ -1362,28 +1363,24 @@ function initEvents() {
       return;
     }
     const results = performPulls(10, currentBanner);
-    playPullStartVideo(() => {
+    playPullStartVideo(results, () => {
       showReveal(results);
     });
   });
 
-  document.getElementById('skip-reveal-btn').addEventListener('click', () => {
+  let skipFired = false;
+  const handleSkipBtn = () => {
+    if (skipFired) return;
+    skipFired = true;
+    setTimeout(() => skipFired = false, 300);
+
+    // DO NOT allow skipping while a 5-star video is playing
     if (activePreRevealCleanup) {
-      activePreRevealCleanup(true);
+      return;
     }
-    
-    if (revealState.layout > 1) {
-      revealState.skipMode = true;
-      document.getElementById('skip-reveal-btn').style.display = 'none';
-      
-      const next5 = revealState.results.findIndex((r, i) => i >= revealState.currentIndex && r.rarity === '5star');
-      if (next5 !== -1) {
-        revealState.currentIndex = next5;
-        playNextCardInSequence();
-      } else {
-        showSummaryScreen();
-      }
-    } else {
+
+    if (revealState.layout === 1) {
+      // 1-pull skip
       clearRevealTimeouts();
       const singleStage = document.getElementById('single-card-stage');
       const wrapper = singleStage.querySelector('.reveal-card-wrapper');
@@ -1394,15 +1391,34 @@ function initEvents() {
       }
       document.getElementById('skip-reveal-btn').style.display = 'none';
       document.getElementById('collect-btn').classList.add('visible');
+      revealState.active = false;
+      return;
     }
-  });
 
-  document.getElementById('reveal-click-overlay').addEventListener('click', () => {
+    // 10-pull skip
+    revealState.skipMode = true;
+    document.getElementById('skip-reveal-btn').style.display = 'none';
+    
+    // find the next 5-star AFTER the current one
+    const next5 = revealState.results.findIndex((r, i) => i > revealState.currentIndex && r.rarity === '5star');
+    if (next5 !== -1) {
+      revealState.currentIndex = next5;
+      playNextCardInSequence();
+    } else {
+      showSummaryScreen();
+    }
+  };
+
+  document.getElementById('skip-reveal-btn').addEventListener('click', handleSkipBtn);
+  document.getElementById('skip-reveal-btn').addEventListener('pointerup', handleSkipBtn);
+
+  document.getElementById('reveal-click-overlay').addEventListener('pointerup', () => {
     if (!revealState.active) return;
     
     const collectBtn = document.getElementById('collect-btn');
     if (collectBtn && collectBtn.classList.contains('visible')) {
-      collectBtn.click();
+      // Directly call the collect logic instead of .click() to avoid listener issues
+      if (window.performCollect) window.performCollect();
       return;
     }
     
@@ -1440,12 +1456,24 @@ function initEvents() {
     }
   });
 
-  // Collect all → back to pull screen
-  document.getElementById('collect-btn').addEventListener('click', () => {
+  // Collect all back to pull screen
+  window.performCollect = () => {
+    playSFX('back');
     clearParticles();
     setupPullScreen(currentBanner);
     showScreen('pull');
-  });
+  };
+
+  let collectFired = false;
+  const handleCollectBtn = (e) => {
+    if (collectFired) return;
+    collectFired = true;
+    setTimeout(() => collectFired = false, 300);
+    window.performCollect();
+  };
+
+  document.getElementById('collect-btn').addEventListener('click', handleCollectBtn);
+  document.getElementById('collect-btn').addEventListener('pointerup', handleCollectBtn);
 }
 
 // ── HELPERS ────────────────────────────────────────────────
