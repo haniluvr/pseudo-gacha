@@ -152,7 +152,7 @@ const CARD_CREDITS = {
   },
   "Lily of the Valley Lover's": {
     artist: "pinkieplum",
-    ig: "https://www.instagram.com/pinkieplum"
+    ig: "https://instagram.com/pinkieplum"
   },
   "Sweet Morning": {
     artist: "Yuhina.san",

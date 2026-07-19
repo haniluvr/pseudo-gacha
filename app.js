@@ -1233,13 +1233,18 @@ function playPullStartVideo(results, onComplete) {
   video.src = hasFiveStar ? 'assets/ui/animations/pull_start_gold.mp4' : 'assets/ui/animations/pull_start.mp4';
   video.muted = true;
   video.load();
-  if (hasFiveStar) {
-    playSFX('pullStartGold');
-  } else {
-    playSFX('pullStart');
-  }
+
+  const playSfxHandler = () => {
+    if (hasFiveStar) {
+      playSFX('pullStartGold');
+    } else {
+      playSFX('pullStart');
+    }
+  };
+  video.addEventListener('playing', playSfxHandler, { once: true });
   
   const finish = () => {
+    video.removeEventListener('playing', playSfxHandler);
     video.removeEventListener('ended', finish);
     container.removeEventListener('pointerup', tapHandler);
     container.removeEventListener('click', tapHandler);
@@ -1386,15 +1391,7 @@ function playNextCardInSequence() {
 
   playPreRevealVideo(result, () => {
     if (!revealState.active) return;
-    playSingleCardAnimation(result, singleStage, () => {
-      if (revealState.skipMode) {
-        revealState.currentIndex++;
-        playNextCardInSequence();
-      } else {
-        const collectBtn = document.getElementById('collect-btn');
-        if (collectBtn) collectBtn.classList.add('visible');
-      }
-    });
+    playSingleCardAnimation(result, singleStage);
   });
 }
 
