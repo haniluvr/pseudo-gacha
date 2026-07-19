@@ -141,6 +141,7 @@ function playSFX(name) {
   source.connect(gainNode);
   gainNode.connect(audioCtx.destination);
   source.start(0);
+  return source;
 }
 
 document.addEventListener('click', (e) => {
@@ -1215,6 +1216,7 @@ function playPullStartVideo(results, onComplete) {
   if (skipBtn) skipBtn.style.display = 'none';
 
   let skipped = false;
+  let activeAudioSource = null;
   const tapHandler = (e) => {
     if (skipBtn && !e.target.closest('#skip-pull-start-btn')) {
       skipBtn.style.display = 'flex';
@@ -1236,9 +1238,9 @@ function playPullStartVideo(results, onComplete) {
 
   const playSfxHandler = () => {
     if (hasFiveStar) {
-      playSFX('pullStartGold');
+      activeAudioSource = playSFX('pullStartGold');
     } else {
-      playSFX('pullStart');
+      activeAudioSource = playSFX('pullStart');
     }
   };
   video.addEventListener('playing', playSfxHandler, { once: true });
@@ -1267,6 +1269,9 @@ function playPullStartVideo(results, onComplete) {
     e.stopPropagation();
     e.preventDefault();
     skipped = true;
+    if (activeAudioSource) {
+      try { activeAudioSource.stop(); } catch(err) {}
+    }
     finish();
   };
 
