@@ -359,6 +359,13 @@
 
             <div class="guarantee-zone" id="guarantee-zone" aria-live="polite"></div>
 
+            <div class="precise-wish-container" id="pw-container" style="display:none; text-align: center; margin-bottom: 4px; margin-top: -8px;">
+              <button class="pw-trigger-btn" id="pw-trigger-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Precise Wish: <span id="pw-status-text">None</span>
+              </button>
+            </div>
+
             <div class="pull-btns-row">
               <button class="pull-action-btn" id="pull-1-btn" aria-label="Pull once">
                 <div class="btn-shine" aria-hidden="true"></div>
@@ -514,6 +521,57 @@
       <svg id="music-icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     </button>
 
+    <!-- Precise Wish Modal -->
+    <div id="precise-wish-modal" class="settings-overlay" aria-modal="true" role="dialog" aria-hidden="true" style="display: none;">
+      <div class="settings-container">
+        <div class="settings-header">
+          <h2 class="pw-title" style="margin:0; font-family:var(--font-d); color:var(--gold-lt);">PRECISE WISH</h2>
+          <button id="pw-close-btn" class="settings-close" aria-label="Close Precise Wish">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="settings-body">
+          <p class="pw-desc" style="color:var(--txt-2); font-size:14px; margin-bottom:16px;">Select your target memory. If your first 5-Star pull is not your chosen memory, the next 5-Star is guaranteed to be your choice.</p>
+          
+          <div class="pw-status-bar">
+            <span>Current Wish: <strong id="pw-current-wish">None</strong></span>
+            <span class="pw-points" id="pw-points-display">0/1</span>
+          </div>
+
+          <div class="pw-grid">
+            <button class="pw-char-btn" data-char="xavier">
+              <img src="assets/ui/select/xavier.webp" alt="Xavier">
+              <span>Xavier</span>
+            </button>
+            <button class="pw-char-btn" data-char="zayne">
+              <img src="assets/ui/select/zayne.webp" alt="Zayne">
+              <span>Zayne</span>
+            </button>
+            <button class="pw-char-btn" data-char="rafayel">
+              <img src="assets/ui/select/rafayel.webp" alt="Rafayel">
+              <span>Rafayel</span>
+            </button>
+            <button class="pw-char-btn" data-char="sylus">
+              <img src="assets/ui/select/sylus.webp" alt="Sylus">
+              <span>Sylus</span>
+            </button>
+            <button class="pw-char-btn" data-char="caleb">
+              <img src="assets/ui/select/caleb.webp" alt="Caleb">
+              <span>Caleb</span>
+            </button>
+            <button class="pw-char-btn" data-char="valko">
+              <img src="assets/ui/select/valko.webp" alt="Valko">
+              <span>Valko</span>
+            </button>
+          </div>
+
+          <div class="pw-footer" style="display:flex; justify-content:center; gap:12px; margin-top:24px;">
+            <button id="pw-cancel-choice-btn" class="pw-action-btn cancel" style="display:none; background:transparent; border:1px solid #555; color:#ddd; padding:8px 16px; border-radius:var(--r-sm); cursor:pointer;">Cancel Wish</button>
+            <button id="pw-confirm-btn" class="pw-action-btn confirm" style="background:var(--gold-lt); color:#000; padding:8px 24px; border:none; border-radius:var(--r-sm); font-weight:600; cursor:pointer;" disabled>Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div><!-- /app -->
 
   <!-- ── Settings Modal ── -->

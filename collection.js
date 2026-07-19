@@ -158,7 +158,7 @@ function initRealCollection() {
   let currentView = 'main'; // 'main' or 'char'
 
   const openModal = () => {
-    if (typeof playSFX === 'function') playSFX('click');
+    if (typeof playSFX === 'function') playSFX('collectionModal');
     modal.style.display = 'flex';
     requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('active')));
     

@@ -797,7 +797,8 @@ svg {
 }
 
 .pull-modal-outer.arch-outer {
-  height: 620px;
+  height: auto;
+  min-height: 620px;
   width: 460px;
   border-radius: 230px 230px 0 0;
   background: rgba(7, 7, 28, .8);
