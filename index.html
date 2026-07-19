@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Infant:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <div id="app">
@@ -511,6 +511,7 @@
 
     <!-- Pull Start Universal Video -->
     <div id="pull-start-video-container" class="pull-start-video-container" aria-hidden="true" style="display:none;">
+      <button id="skip-pull-start-btn" class="skip-btn" aria-label="Skip Animation" style="display:none; z-index: 999;">Skip</button>
       <video id="pull-start-video" playsinline muted preload="auto"></video>
     </div>
 
@@ -531,7 +532,7 @@
           </button>
         </div>
         <div class="settings-body">
-          <p class="pw-desc" style="color:var(--txt-2); font-size:14px; margin-bottom:16px;">Select your target memory. If your first 5-Star pull is not your chosen memory, the next 5-Star is guaranteed to be your choice.</p>
+          <p class="pw-desc" style="color:var(--txt-2); font-size:14px; margin-bottom:16px;">Select your target love interest. If your first 5-Star pull is not your chosen love interest, the next 5-Star is guaranteed to be your choice.</p>
           
           <div class="pw-status-bar">
             <span>Current Wish: <strong id="pw-current-wish">None</strong></span>
@@ -666,14 +667,16 @@
             <h3 style="color: var(--gold); margin-bottom: 12px; font-family: var(--font-d); font-size: 20px;">Patch Notes</h3>
             <p style="color: var(--txt-2); margin-bottom: 8px;">Changes made since the last update:</p>
             <ul style="color: #ddd; padding-left: 20px; line-height: 1.6; font-size: 14px;">
-              <li><strong>42 NEW Valko Memories</strong></li>
+              <li><strong>45 NEW Valko Memories</strong></li>
               <li><strong>NEW Precise Wish System</strong></li>
               <li><strong>NEW Memory Collection Tracker</strong></li>
               <li>Golden Pull Animation and Sound SFX for 5-star cards</li>
               <li>1 Pull Streamlining</li>
               <li>Skip Button Bug Fixes</li>
+              <li>Claim Button Bug Fixes</li>
               <li>Opera GX / Desktop Video Fixes</li>
               <li>Android / Ecoasia Touch Improvements</li>
+              <li>Added SFX for claim button</li>
             </ul>
           </div>
           
@@ -696,8 +699,8 @@
   <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
 
   <script src="cards.js"></script>
-  <script src="memories.js"></script>
+  <script src="memories.js?v=5"></script>
   <script src="collection.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>

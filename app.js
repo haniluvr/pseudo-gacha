@@ -151,7 +151,10 @@ document.addEventListener('click', (e) => {
     if (id === 'collection-open-btn') {
       playSFX('collectionModal');
       return;
-    } else if (id === 'close-modal-btn' || id === 'col-back-btn' || id === 'settings-close-btn' || id === 'skip-reveal-btn' || id === 'collect-btn') {
+    } else if (id === 'collect-btn') {
+      playSFX('claim_cue');
+      return;
+    } else if (id === 'close-modal-btn' || id === 'col-back-btn' || id === 'settings-close-btn' || id === 'skip-reveal-btn') {
       playSFX('back');
       return;
     } else if (classList.contains('banner-nav-item') || classList.contains('banner-card')) {
@@ -386,7 +389,7 @@ function saveState() {
   try {
     localStorage.setItem(STATE_KEY, JSON.stringify(gs));
     if (typeof updateCollectionNotification === 'function') {
-      updateCollectionNotification();
+      updateCollectionNotification(); 
     }
   } catch (_) { /* ignore */ }
 }
@@ -537,25 +540,20 @@ function performPulls(count, bannerType) {
     // Collection Tracker & Rank logic
     let isNew = false;
     let rankUp = 0;
-    let refunded = false;
     
     const currentPulls = gs.collection[card.cardName] || 0;
     
     if (currentPulls === 0) {
       isNew = true;
       gs.collection[card.cardName] = 1;
-    } else if (currentPulls < 4) {
-      // It's a duplicate that can be used for rank up (max 3 ranks requires 4 total copies)
+    } else {
+      // Duplicates just keep incrementing endlessly
       rankUp = currentPulls; 
       gs.collection[card.cardName] = currentPulls + 1;
-    } else {
-      refunded = true;
-      gs[pullsKey]--; // Refund the pull
     }
     
     card.isNew = isNew;
-    card.rankUp = rankUp; // Used to indicate duplicate status
-    card.refunded = refunded;
+    card.rankUp = rankUp;
 
     // Update pity counters
     if (rarity === '5star') {
@@ -1123,7 +1121,7 @@ function pushTimeout(fn, delay) {
   return id;
 }
 
-function showReveal(results) {
+function showReveal(results, startSkipped = false) {
   revealState.active = true;
   revealState.results = results;
   revealState.currentIndex = 0;
@@ -1146,7 +1144,7 @@ function showReveal(results) {
   
   const collectText = document.getElementById('collect-btn-text');
   if (collectText) {
-    collectText.textContent = revealState.layout === 1 ? 'Collect' : 'Collect All';
+    collectText.textContent = revealState.layout === 1 ? 'Claim' : 'Claim All';
   }
 
   skipBtn.style.display = revealState.layout === 1 ? 'none' : 'block';
@@ -1159,15 +1157,51 @@ function showReveal(results) {
   showScreen('reveal');
   resizeParticles();
   
-  if (revealState.layout === 1) {
-    playPreRevealVideo(results[0], () => {
-      if (!revealState.active) return;
-      playSingleCardAnimation(results[0], singleStage, () => {
+  if (startSkipped) {
+    if (revealState.layout === 1) {
+      if (results[0].rarity === '5star') {
+        playPreRevealVideo(results[0], () => {
+          if (!revealState.active) return;
+          playSingleCardAnimation(results[0], singleStage, () => {
+            collectBtn.classList.add('visible');
+          });
+        });
+      } else {
+        singleStage.innerHTML = '';
+        const wrapper = buildCard(results[0], 1);
+        singleStage.appendChild(wrapper);
+        wrapper.classList.add('visible');
+        wrapper.querySelector('.reveal-card').classList.add('flipped');
+        wrapper.querySelector('.card-glow').classList.add('visible');
+        skipBtn.style.display = 'none';
         collectBtn.classList.add('visible');
-      });
-    });
+        revealState.active = false;
+      }
+    } else {
+      const has5Star = results.some(r => r.rarity === '5star');
+      if (has5Star) {
+        const first5 = results.findIndex(r => r.rarity === '5star');
+        revealState.skipMode = true;
+        revealState.currentIndex = first5;
+        skipBtn.style.display = 'none';
+        playNextCardInSequence();
+      } else {
+        revealState.skipMode = true;
+        skipBtn.style.display = 'none';
+        showSummaryScreen();
+      }
+    }
   } else {
-    playNextCardInSequence();
+    if (revealState.layout === 1) {
+      playPreRevealVideo(results[0], () => {
+        if (!revealState.active) return;
+        playSingleCardAnimation(results[0], singleStage, () => {
+          collectBtn.classList.add('visible');
+        });
+      });
+    } else {
+      playNextCardInSequence();
+    }
   }
 }
 
@@ -1179,6 +1213,7 @@ function playPullStartVideo(results, onComplete) {
 
   if (skipBtn) skipBtn.style.display = 'none';
 
+  let skipped = false;
   const tapHandler = (e) => {
     if (skipBtn && !e.target.closest('#skip-pull-start-btn')) {
       skipBtn.style.display = 'flex';
@@ -1218,13 +1253,14 @@ function playPullStartVideo(results, onComplete) {
     container.classList.remove('active');
     setTimeout(() => {
       container.style.display = 'none';
-      onComplete();
+      onComplete(skipped);
     }, 500); // fade out duration
   };
 
   const finishSkip = (e) => {
     e.stopPropagation();
     e.preventDefault();
+    skipped = true;
     finish();
   };
 
@@ -1349,7 +1385,15 @@ function playNextCardInSequence() {
 
   playPreRevealVideo(result, () => {
     if (!revealState.active) return;
-    playSingleCardAnimation(result, singleStage, null);
+    playSingleCardAnimation(result, singleStage, () => {
+      if (revealState.skipMode) {
+        revealState.currentIndex++;
+        playNextCardInSequence();
+      } else {
+        const collectBtn = document.getElementById('collect-btn');
+        if (collectBtn) collectBtn.classList.add('visible');
+      }
+    });
   });
 }
 
@@ -1431,8 +1475,8 @@ function initEvents() {
     const rem = getRemainingPulls();
     if (rem < 1) { showToast('No pulls remaining today! Reset in ' + getCountdownStr()); return; }
     const results = performPulls(1, currentBanner);
-    playPullStartVideo(results, () => {
-      showReveal(results);
+    playPullStartVideo(results, (skipped) => {
+      showReveal(results, skipped);
     });
   });
 
@@ -1445,8 +1489,8 @@ function initEvents() {
       return;
     }
     const results = performPulls(10, currentBanner);
-    playPullStartVideo(results, () => {
-      showReveal(results);
+    playPullStartVideo(results, (skipped) => {
+      showReveal(results, skipped);
     });
   });
 
@@ -1495,14 +1539,14 @@ function initEvents() {
   document.getElementById('skip-reveal-btn').addEventListener('pointerup', handleSkipBtn);
 
   document.getElementById('reveal-click-overlay').addEventListener('pointerup', () => {
-    if (!revealState.active) return;
-    
     const collectBtn = document.getElementById('collect-btn');
     if (collectBtn && collectBtn.classList.contains('visible')) {
       // Directly call the collect logic instead of .click() to avoid listener issues
       if (window.performCollect) window.performCollect();
       return;
     }
+    
+    if (!revealState.active) return;
     
     if (activePreRevealCleanup) {
       activePreRevealCleanup(true);
@@ -1540,7 +1584,7 @@ function initEvents() {
 
   // Collect all back to pull screen
   window.performCollect = () => {
-    playSFX('back');
+    playSFX('claim_cue');
     clearParticles();
     setupPullScreen(currentBanner);
     showScreen('pull');
@@ -1624,15 +1668,12 @@ function init() {
   initNoticeEvents();
   refreshBannerSelect();
   startCountdown();
-
-  updateCurrencyUI();
-  updatePityUI();
   
   // Show initial screen
-  showScreen('screen-select');
+  showScreen('select');
   
   if (typeof updateCollectionNotification === 'function') {
-    updateCollectionNotification();
+    updateCollectionNotification(); 
   }
 
   // Auto-open notice modal if version is new

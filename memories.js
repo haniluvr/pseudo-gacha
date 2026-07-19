@@ -28,7 +28,7 @@ const CARD_CREDITS = {
     artist: "Aagknorr",
     x: "https://x.com/Aagknorr"
   },
-  "Birthday Plushie": {
+  "Playful Plush": {
     artist: "Syer",
     x: "https://x.com/imuyumiii",
     ig: "https://instagram.com/imuyumiii",
@@ -179,6 +179,18 @@ const CARD_CREDITS = {
     x: "https://x.com/CELYNSICAL",
     ig: "https://instagram.com/CELYNSICAL",
     tiktok: "https://www.tiktok.com/@CELYNSICAL"
+  },
+  "Sunlit Sovereign": {
+    artist: "bones",
+    x: "https://x.com/bonesandchocos"
+  },
+  "After Hours": {
+    artist: "Morgenty",
+    x: "https://x.com/fine_fiction"
+  },
+  "After Dark": {
+    artist: "Morgenty",
+    x: "https://x.com/fine_fiction"
   }
 };
 
@@ -539,9 +551,14 @@ function updateCollectionNotification() {
   if (typeof CARD_CATALOG === 'undefined' || !gs || !gs.collection) return;
   let hasNotif = false;
   for (const card of CARD_CATALOG) {
+    const isNew = gs.newCards && gs.newCards[card.cardName];
+    if (isNew) {
+      hasNotif = true;
+      break;
+    }
     const count = gs.collection[card.cardName] || 0;
     if (count > 0) {
-      const rank = gs.ranks[card.cardName] || 0;
+      const rank = (gs.ranks && gs.ranks[card.cardName]) || 0;
       if (count > rank + 1 && rank < 3) {
         hasNotif = true;
         break;
@@ -562,4 +579,38 @@ function updateCollectionNotification() {
       if (dot) dot.remove();
     }
   }
+
+  updateCharTabNotifications();
+}
+
+function updateCharTabNotifications() {
+  if (typeof CARD_CATALOG === 'undefined' || !gs || !gs.collection) return;
+  const charTabs = document.querySelectorAll('.col-char-tab');
+  if (!charTabs.length) return;
+
+  const charNotifs = {};
+  for (const card of CARD_CATALOG) {
+    const count = gs.collection[card.cardName] || 0;
+    if (count > 0) {
+      const rank = (gs.ranks && gs.ranks[card.cardName]) || 0;
+      if (count > rank + 1 && rank < 3) {
+        charNotifs[card.character] = true;
+      }
+    }
+  }
+
+  charTabs.forEach(tab => {
+    const char = tab.dataset.char;
+    const hasNotif = !!charNotifs[char];
+    let dot = tab.querySelector('.col-notif-dot');
+    if (hasNotif) {
+      if (!dot) {
+        dot = document.createElement('div');
+        dot.className = 'col-notif-dot';
+        tab.appendChild(dot);
+      }
+    } else {
+      if (dot) dot.remove();
+    }
+  });
 }

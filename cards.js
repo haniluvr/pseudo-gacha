@@ -2086,6 +2086,16 @@ const CARD_CATALOG = [
     "rarityStr": "5star",
     "type": "lunar",
     "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/sunlit sovereign.webp",
+    "cardName": "Sunlit Sovereign",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
     "assetPath": "assets/valko/five-star/lunar/limited/tethered alpha.webp",
     "cardName": "Tethered Alpha",
     "isVideo": false
@@ -2129,6 +2139,26 @@ const CARD_CATALOG = [
     "assetPath": "assets/valko/five-star/lunar/standard/windrest plains.mp4",
     "cardName": "Windrest Plains",
     "isVideo": true
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "solar",
+    "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/solar/limited/after dark.webp",
+    "cardName": "After Dark",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "solar",
+    "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/solar/limited/after hours.webp",
+    "cardName": "After Hours",
+    "isVideo": false
   },
   {
     "character": "valko",
@@ -2196,6 +2226,16 @@ const CARD_CATALOG = [
     "rarityStr": "4star",
     "type": "lunar",
     "bannerType": "both",
+    "assetPath": "assets/valko/four-star/lunar/hot deal.webp",
+    "cardName": "Hot Deal",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 4,
+    "rarityStr": "4star",
+    "type": "lunar",
+    "bannerType": "both",
     "assetPath": "assets/valko/four-star/lunar/my lost dog.webp",
     "cardName": "My Lost Dog",
     "isVideo": false
@@ -2228,6 +2268,16 @@ const CARD_CATALOG = [
     "bannerType": "both",
     "assetPath": "assets/valko/four-star/lunar/square up.webp",
     "cardName": "Square Up",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 4,
+    "rarityStr": "4star",
+    "type": "lunar",
+    "bannerType": "both",
+    "assetPath": "assets/valko/four-star/lunar/sweet morning.webp",
+    "cardName": "Sweet Morning",
     "isVideo": false
   },
   {
@@ -2376,6 +2426,16 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "lunar",
     "bannerType": "both",
+    "assetPath": "assets/valko/three-star/lunar/just a bite.webp",
+    "cardName": "Just A Bite",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 3,
+    "rarityStr": "3star",
+    "type": "lunar",
+    "bannerType": "both",
     "assetPath": "assets/valko/three-star/lunar/lone wolf by the moon.webp",
     "cardName": "Lone Wolf By The Moon",
     "isVideo": false
@@ -2406,8 +2466,8 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/valko/three-star/solar/birthday plushie.webp",
-    "cardName": "Birthday Plushie",
+    "assetPath": "assets/valko/three-star/solar/chocolate day.webp",
+    "cardName": "Chocolate Day",
     "isVideo": false
   },
   {
@@ -2416,8 +2476,18 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
-    "assetPath": "assets/valko/three-star/solar/chocolate day.webp",
-    "cardName": "Chocolate Day",
+    "assetPath": "assets/valko/three-star/solar/lily of the valley lover's.webp",
+    "cardName": "Lily Of The Valley Lover's",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 3,
+    "rarityStr": "3star",
+    "type": "solar",
+    "bannerType": "both",
+    "assetPath": "assets/valko/three-star/solar/mating dance.webp",
+    "cardName": "Mating Dance",
     "isVideo": false
   },
   {
@@ -2436,8 +2506,28 @@ const CARD_CATALOG = [
     "rarityStr": "3star",
     "type": "solar",
     "bannerType": "both",
+    "assetPath": "assets/valko/three-star/solar/playful plush.webp",
+    "cardName": "Playful Plush",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 3,
+    "rarityStr": "3star",
+    "type": "solar",
+    "bannerType": "both",
     "assetPath": "assets/valko/three-star/solar/pouty.webp",
     "cardName": "Pouty",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 3,
+    "rarityStr": "3star",
+    "type": "solar",
+    "bannerType": "both",
+    "assetPath": "assets/valko/three-star/solar/revolution!.webp",
+    "cardName": "Revolution!",
     "isVideo": false
   },
   {
@@ -3388,6 +3478,16 @@ const CARD_CATALOG = [
     "bannerType": "limited",
     "assetPath": "assets/zayne/five-star/lunar/limited/aeon's canon.mp4",
     "cardName": "Aeon's Canon",
+    "isVideo": true
+  },
+  {
+    "character": "zayne",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
+    "assetPath": "assets/zayne/five-star/lunar/limited/chilling crescendo.mp4",
+    "cardName": "Chilling Crescendo",
     "isVideo": true
   },
   {
