@@ -1,6 +1,6 @@
 // collection.js
 
-const ART_CREDITS = {
+const CARD_CREDITS = {
   "Point Blank Flirt": {
     artist: "jin",
     x: "https://x.com/starsxav"
