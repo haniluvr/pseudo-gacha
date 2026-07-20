@@ -100,7 +100,7 @@ const sfxUrls = {
   pullRevealAll: 'assets/audio-cue/pull_reveal_all_cue.mp3',
   select: 'assets/audio-cue/select_cue.mp3',
   pullStart: 'assets/audio-cue/pull_start_cue.mp3',
-  pullStartGold: 'assets/audio-cue/pull_start_gold_cue.mp3',
+  pullStartGold: 'assets/audio-cue/pull_start_gold_cue.mp3?v=2',
   claim_cue: 'assets/audio-cue/claim_cue.mp3'
 };
 

@@ -1,6 +1,10 @@
 // collection.js
 
-const CARD_CREDITS = {
+const ART_CREDITS = {
+  "Point Blank Flirt": {
+    artist: "jin",
+    x: "https://x.com/starsxav"
+  },
   "Morning Confessions": {
     artist: "b",
     ig: "https://www.instagram.com/beejaws",
@@ -146,8 +150,8 @@ const CARD_CREDITS = {
     tiktok: "https://www.tiktok.com/@c0axyz"
   },
   "Night-time Territorial": {
-    artist: "solisweirddd",
-    x: "https://x.com/solisweirddd",
+    artist: "solisweirdddd",
+    x: "https://x.com/solisweirdddd",
     tiktok: "https://www.tiktok.com/@solis_055"
   },
   "Lily Of The Valley Lover's": {

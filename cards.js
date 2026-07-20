@@ -2056,6 +2056,16 @@ const CARD_CATALOG = [
     "rarityStr": "5star",
     "type": "lunar",
     "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/point blank flirt.webp",
+    "cardName": "Point Blank Flirt",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
     "assetPath": "assets/valko/five-star/lunar/limited/restless instincts.mp4",
     "cardName": "Restless Instincts",
     "isVideo": true
