@@ -1,6 +1,10 @@
 // collection.js
 
 const CARD_CREDITS = {
+  "Tasting Victory": {
+    artist: "jin",
+    x: "https://x.com/starsxav"
+  },
   "Point Blank Flirt": {
     artist: "jin",
     x: "https://x.com/starsxav"
