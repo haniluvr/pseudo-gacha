@@ -2046,6 +2046,16 @@ const CARD_CATALOG = [
     "rarityStr": "5star",
     "type": "lunar",
     "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/breaking the leash.webp",
+    "cardName": "Breaking The Leash",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
     "assetPath": "assets/valko/five-star/lunar/limited/chocolate milk & charm.webp",
     "cardName": "Chocolate Milk & Charm",
     "isVideo": false
@@ -2058,6 +2068,16 @@ const CARD_CATALOG = [
     "bannerType": "limited",
     "assetPath": "assets/valko/five-star/lunar/limited/framing perfection.webp",
     "cardName": "Framing Perfection",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/kiss attack.webp",
+    "cardName": "Kiss Attack",
     "isVideo": false
   },
   {
@@ -2106,8 +2126,28 @@ const CARD_CATALOG = [
     "rarityStr": "5star",
     "type": "lunar",
     "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/silent reflections.webp",
+    "cardName": "Silent Reflections",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
     "assetPath": "assets/valko/five-star/lunar/limited/sleeping wolf.webp",
     "cardName": "Sleeping Wolf",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/summer instinct.webp",
+    "cardName": "Summer Instinct",
     "isVideo": false
   },
   {
@@ -2128,6 +2168,16 @@ const CARD_CATALOG = [
     "bannerType": "limited",
     "assetPath": "assets/valko/five-star/lunar/limited/sunlit sovereign.webp",
     "cardName": "Sunlit Sovereign",
+    "isVideo": false
+  },
+  {
+    "character": "valko",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "limited",
+    "assetPath": "assets/valko/five-star/lunar/limited/sweet tooth flex.webp",
+    "cardName": "Sweet Tooth Flex",
     "isVideo": false
   },
   {

@@ -1,6 +1,31 @@
 // collection.js
 
 const CARD_CREDITS = {
+  "Breaking The Leash": {
+    artist: "Cee",
+    x: "https://x.com/celh0_0",
+    ig: "https://instagram.com/celh0_0"
+  },
+  "Kiss Attack": {
+    artist: "Cee",
+    x: "https://x.com/celh0_0",
+    ig: "https://instagram.com/celh0_0"
+  },
+  "Silent Reflections": {
+    artist: "Cee",
+    x: "https://x.com/celh0_0",
+    ig: "https://instagram.com/celh0_0"
+  },
+  "Sweet Tooth Flex": {
+    artist: "Cee",
+    x: "https://x.com/celh0_0",
+    ig: "https://instagram.com/celh0_0"
+  },
+  "Summer Instinct": {
+    artist: "Cee",
+    x: "https://x.com/celh0_0",
+    ig: "https://instagram.com/celh0_0"
+  },
   "Holydays": {
     artist: "Mephisto",
     x: "https://x.com/Harlock_Mephistokitten",
