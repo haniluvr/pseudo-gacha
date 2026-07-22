@@ -3826,6 +3826,16 @@ const CARD_CATALOG = [
     "rarityStr": "5star",
     "type": "lunar",
     "bannerType": "standard",
+    "assetPath": "assets/zayne/five-star/lunar/standard/framed dusk.mp4",
+    "cardName": "Framed Dusk",
+    "isVideo": true
+  },
+  {
+    "character": "zayne",
+    "rarity": 5,
+    "rarityStr": "5star",
+    "type": "lunar",
+    "bannerType": "standard",
     "assetPath": "assets/zayne/five-star/lunar/standard/frozen nightfall.mp4",
     "cardName": "Frozen Nightfall",
     "isVideo": true
