@@ -89,8 +89,6 @@ const BASE_RATE_5       = 0.01;      // 1% base 5★ rate
 const BASE_RATE_4       = 0.07;      // 7% base 4★ rate
 const MAX_DAILY_PULLS   = 250;       // per banner per day
 // --- AUDIO SFX ---
-let audioCtx = null;
-const sfxBuffers = {};
 const sfxUrls = {
   back: 'assets/audio-cue/back_cue.mp3',
   collectionModal: 'assets/audio-cue/collection_modal_cue.mp3',
@@ -104,45 +102,40 @@ const sfxUrls = {
   claim_cue: 'assets/audio-cue/claim_cue.mp3'
 };
 
-async function initSFX() {
-  if (audioCtx) return;
-  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const sfxElements = {};
+
+function initSFX() {
   for (const [key, url] of Object.entries(sfxUrls)) {
-    try {
-      const response = await fetch(url);
-      const arrayBuffer = await response.arrayBuffer();
-      sfxBuffers[key] = await audioCtx.decodeAudioData(arrayBuffer);
-    } catch(e) {
-      console.error("Failed to load sfx:", key, e);
-    }
+    const audio = new Audio(url);
+    audio.volume = gs.sfxVolume ?? 0.5;
+    sfxElements[key] = audio;
   }
 }
 
-const unlockAudio = () => {
-  if (!audioCtx) initSFX();
-  else if (audioCtx.state === 'suspended') audioCtx.resume();
-};
+function playSFX(name) {
+  if (!sfxElements[name]) {
+    if (Object.keys(sfxElements).length === 0) {
+      initSFX();
+    }
+    if (!sfxElements[name]) return null;
+  }
+  const audio = sfxElements[name];
+  audio.currentTime = 0;
+  audio.volume = gs.sfxVolume ?? 0.5;
+  audio.play().catch(e => console.error("SFX play failed:", e));
+  return audio;
+}
+
+let sfxInitialized = false;
+function unlockAudio() {
+  if (!sfxInitialized) {
+    initSFX();
+    sfxInitialized = true;
+  }
+}
 document.addEventListener('click', unlockAudio, { once: true, capture: true });
 document.addEventListener('pointerup', unlockAudio, { once: true, capture: true });
 document.addEventListener('touchstart', unlockAudio, { once: true, capture: true });
-
-function playSFX(name) {
-  if (!audioCtx || !sfxBuffers[name]) {
-    // If context not ready, try fallback
-    if (!audioCtx) initSFX().then(() => playSFX(name));
-    return;
-  }
-  const source = audioCtx.createBufferSource();
-  source.buffer = sfxBuffers[name];
-  
-  const gainNode = audioCtx.createGain();
-  gainNode.gain.value = gs.sfxVolume ?? 0.5;
-  
-  source.connect(gainNode);
-  gainNode.connect(audioCtx.destination);
-  source.start(0);
-  return source;
-}
 
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('button, .banner-nav-item, .banner-card');
@@ -376,6 +369,7 @@ function defaultState() {
     // Manual Rank Tracking: { "Card Name": rank }
     ranks: {},
     volume: 0.4,
+    sfxVolume: 0.5,
   };
 }
 
@@ -1258,7 +1252,7 @@ function playPullStartVideo(results, onComplete) {
     e.preventDefault();
     skipped = true;
     if (activeAudioSource) {
-      try { activeAudioSource.stop(); } catch(err) {}
+      try { activeAudioSource.pause(); } catch(err) {}
     }
     finish();
   };
